@@ -107,18 +107,6 @@ p {
   font-size: 0.28rem;
 }
 
-.logo {
-  position: absolute;
-  top: 0.4rem;
-  z-index: 10;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-  -moz-transform: translate(-50%);
-  -ms-transform: translate(-50%);
-  -o-transform: translate(-50%);
-  transform: translate(-50%);
-}
-
 .btn {
   text-align: center;
   display: block;
@@ -655,8 +643,7 @@ html, body {
 }
 
 body {
-  background: url("../images/bg.jpg") center center no-repeat;
-  background-size: cover;
+  background: #000;
 }
 
 .preload {
@@ -666,7 +653,6 @@ body {
   z-index: 100;
   width: 100%;
   height: 100%;
-  background: url("../images/preload-bg.jpg") center center no-repeat;
   background-size: cover;
 }
 .preload .animate-flower {
@@ -703,8 +689,9 @@ body {
 }
 
 .logo {
-  width: 2.18rem;
-  height: 0.73rem;
+  padding-top: 0.6rem;
+  margin: 0 auto;
+  width: 3.5rem;
 }
 
 .terms-pop {
@@ -759,25 +746,7 @@ body {
 }
 
 .pin {
-  opacity: 0;
-  z-index: -10;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  padding-top: 1.3rem;
-  box-sizing: border-box;
-  overflow: hidden;
-  -moz-transition: opacity 1s;
-  -o-transition: opacity 1s;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
-}
-.pin.current {
-  display: block;
-  opacity: 1;
-  z-index: 1;
+  position: relative;
 }
 
 .btn {
@@ -787,8 +756,6 @@ body {
   height: 1.22rem;
   margin: 0 auto;
   padding-top: 0.15rem;
-  background: url("../images/btn.png") center center no-repeat;
-  background-size: cover;
   color: #fff;
   font-size: 0.32rem;
   box-sizing: border-box;
@@ -799,583 +766,66 @@ body {
 }
 
 .wrapper {
-  opacity: 0;
+  background: url("../images/bg.jpg") repeat-y;
+  background-size: 100%;
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 1;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .container {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 10;
-  width: 100%;
-  height: 100%;
+  transform: translateY(0);
 }
 
-.border-frame {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 5;
-  width: 100vw;
-  height: 100vh;
-}
-.border-frame .bf {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  width: 100vw;
-  height: 100vh;
-  box-sizing: border-box;
-  border-image: -webkit-linear-gradient(-45deg, #a278c3, #9ea4df, #a278c3) 30 30;
-  border-image: -moz-linear-gradient(-45deg, #a278c3, #9ea4df, #a278c3) 30 30;
-  border-image: linear-gradient(-45deg, #a278c3, #9ea4df, #a278c3) 30 30;
-  border-style: solid;
-  border-width: 2px;
-}
-.border-frame .bf.bf-2 {
-  position: absolute;
-  left: 4px;
-  top: 4px;
-  z-index: 1;
-  width: calc(100vw - 8px);
-  height: calc(100vh - 8px);
-}
-.border-frame .bf.bf-3 {
-  position: absolute;
-  left: 8px;
-  top: 8px;
-  z-index: 1;
-  width: calc(100vw - 16px);
-  height: calc(100vh - 16px);
-}
-
-.pin-landing .title {
-  width: 4.11rem;
-  height: 0.84rem;
-  margin: 0.3rem auto 0;
-}
-.pin-landing .des-wrap {
-  position: relative;
-  z-index: 2;
-  height: 2rem;
-  margin: 0.6rem auto;
-  mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 30%, #ffffff 50%, #ffffff 70%, rgba(255, 255, 255, 0) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  -webkit-mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 30%, #ffffff 50%, #ffffff 70%, rgba(255, 255, 255, 0) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  -webkit-mask-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 30%, white 50%, white 70%, rgba(255, 255, 255, 0) 100%);
-  /* Chrome10-25,Safari5.1-6 */
-}
-.pin-landing .des-wrap .des {
-  position: absolute;
-  top: 0;
-  left: 0%;
-  width: 100%;
-  height: 2.8rem;
-  text-align: center;
-  -webkit-transform: translateY(2rem);
-  -moz-transform: translateY(2rem);
-  -ms-transform: translateY(2rem);
-  -o-transform: translateY(2rem);
-  transform: translateY(2rem);
-  color: #676763;
-  font-size: 0.28rem;
-  line-height: 2;
-}
-.pin-landing .des-wrap .des-1 {
-  -webkit-animation: overandover 16s linear infinite;
-  -moz-animation: overandover 16s linear infinite;
-  animation: overandover 16s linear infinite;
-}
-.pin-landing .des-wrap .des-2 {
-  -webkit-animation: overandover 16s 8s linear infinite;
-  -moz-animation: overandover 16s 8s linear infinite;
-  animation: overandover 16s 8s linear infinite;
-}
-.pin-landing .btn {
-  position: relative;
-  z-index: 2;
-}
-.pin-landing .terms-link {
-  position: relative;
-  z-index: 2;
-  width: 3rem;
-  text-align: center;
-  margin: -0.2rem auto 0;
-  color: #6b6b6b;
-  font-size: 0.22rem;
-  text-decoration: underline;
-}
-.pin-landing .foreground .box-top {
-  position: absolute;
-  z-index: 3;
-  bottom: 1.4rem;
-  left: 2.29rem;
-  width: 2.91rem;
-  height: 1.32rem;
-}
-.pin-landing .foreground .box-bottom {
-  position: absolute;
-  z-index: 2;
-  bottom: 0.5rem;
-  left: 1.8rem;
-  width: 3.81rem;
-  height: 2.94rem;
-}
-.pin-landing .foreground .product-demo {
-  position: absolute;
-  z-index: 1;
-  bottom: 1.8rem;
-  right: -2rem;
-  width: 1.54rem;
-  height: 2.01rem;
-}
-.pin-landing .flower {
-  position: absolute;
-  left: 0.2rem;
-  bottom: -5rem;
-  width: 6.52rem;
-  height: 5.01rem;
-  -moz-transition: bottom 2s 1000ms;
-  -o-transition: bottom 2s 1000ms;
-  -webkit-transition: bottom 2s;
-  -webkit-transition-delay: 1000ms;
-  transition: bottom 2s 1000ms;
-}
-.pin-landing .ani-petal {
-  position: absolute;
-  top: 0.6rem;
-  left: 100%;
-  opacity: 0;
-  z-index: 1;
-  width: 1.09rem;
-  height: 1.26rem;
-}
-.pin-landing.current .ani-petal {
-  -webkit-animation: petal 8s 1;
-  -moz-animation: petal 8s 1;
-  animation: petal 8s 1;
-}
-@-webkit-keyframes petal {
-  0% {
-    top: 0.6rem;
-    left: 100%;
-    opacity: 0;
-    -webkit-transform: rotate(0deg);
-  }
-  10% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-    top: 3rem;
-    left: -20%;
-    -webkit-transform: rotate(100deg);
-  }
-  55% {
-    opacity: 1;
-  }
-  100% {
-    top: 7rem;
-    left: 100%;
-    -webkit-transform: rotate(-100deg);
-    opacity: 0;
-  }
-}
-@-moz-keyframes petal {
-  0% {
-    top: 0.6rem;
-    left: 100%;
-    opacity: 0;
-    -moz-transform: rotate(0deg);
-  }
-  10% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-    top: 3rem;
-    left: -20%;
-    -moz-transform: rotate(100deg);
-  }
-  55% {
-    opacity: 1;
-  }
-  100% {
-    top: 7rem;
-    left: 100%;
-    -moz-transform: rotate(-100deg);
-    opacity: 0;
-  }
-}
-@-o-keyframes petal {
-  0% {
-    top: 0.6rem;
-    left: 100%;
-    opacity: 0;
-    -o-transform: rotate(0deg);
-  }
-  10% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-    top: 3rem;
-    left: -20%;
-    -o-transform: rotate(100deg);
-  }
-  55% {
-    opacity: 1;
-  }
-  100% {
-    top: 7rem;
-    left: 100%;
-    -o-transform: rotate(-100deg);
-    opacity: 0;
-  }
-}
-@keyframes petal {
-  0% {
-    top: 0.6rem;
-    left: 100%;
-    opacity: 0;
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  10% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-    top: 3rem;
-    left: -20%;
-    -webkit-transform: rotate(100deg);
-    transform: rotate(100deg);
-  }
-  55% {
-    opacity: 1;
-  }
-  100% {
-    top: 7rem;
-    left: 100%;
-    -webkit-transform: rotate(-100deg);
-    transform: rotate(-100deg);
-    opacity: 0;
-  }
-}
-.pin-landing.current .flower {
-  bottom: 0rem;
-}
-.pin-landing.current .foreground .box-top {
-  -webkit-animation: outandfade 2000ms 1 forwards;
-  -moz-animation: outandfade 2000ms 1 forwards;
-  animation: outandfade 2000ms 1 forwards;
-}
-@keyframes outandfade {
-  0% {
-    bottom: 1.4rem;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    bottom: 3rem;
-    left: 7.5rem;
-    -webkit-transform: rotate(30deg);
-    -moz-transform: rotate(30deg);
-    -ms-transform: rotate(30deg);
-    -o-transform: rotate(30deg);
-    transform: rotate(30deg);
-  }
-}
-.pin-landing.current .foreground .product-demo {
-  -webkit-animation: fadefromright 2000ms 1000ms 1 forwards;
-  -moz-animation: fadefromright 2000ms 1000ms 1 forwards;
-  animation: fadefromright 2000ms 1000ms 1 forwards;
-}
-@-webkit-keyframes fadefromright {
-  0% {
-    bottom: 2.8rem;
-    right: -2rem;
-    -webkit-transform: rotate(15deg);
-  }
-  100% {
-    bottom: 1.8rem;
-    right: 2rem;
-    -webkit-transform: rotate(-15deg);
-  }
-}
-@-moz-keyframes fadefromright {
-  0% {
-    bottom: 2.8rem;
-    right: -2rem;
-    -moz-transform: rotate(15deg);
-  }
-  100% {
-    bottom: 1.8rem;
-    right: 2rem;
-    -moz-transform: rotate(-15deg);
-  }
-}
-@-o-keyframes fadefromright {
-  0% {
-    bottom: 2.8rem;
-    right: -2rem;
-    -o-transform: rotate(15deg);
-  }
-  100% {
-    bottom: 1.8rem;
-    right: 2rem;
-    -o-transform: rotate(-15deg);
-  }
-}
-@keyframes fadefromright {
-  0% {
-    bottom: 2.8rem;
-    right: -2rem;
-    -webkit-transform: rotate(15deg);
-    transform: rotate(15deg);
-  }
-  100% {
-    bottom: 1.8rem;
-    right: 2rem;
-    -webkit-transform: rotate(-15deg);
-    transform: rotate(-15deg);
-  }
-}
-@keyframes overandover {
-  0% {
-    -webkit-transform: translateY(2rem);
-    -moz-transform: translateY(2rem);
-    -ms-transform: translateY(2rem);
-    -o-transform: translateY(2rem);
-    transform: translateY(2rem);
-  }
-  100% {
-    -webkit-transform: translateY(-4.8rem);
-    -moz-transform: translateY(-4.8rem);
-    -ms-transform: translateY(-4.8rem);
-    -o-transform: translateY(-4.8rem);
-    transform: translateY(-4.8rem);
-  }
-}
-#pin-landing-2 .title {
-  width: 4.97rem;
-  height: 0.84rem;
-}
-
-/*
-  For pin-fillform
+/*============
+================
 */
-#pin-fillform .msgbox {
+.air-plane {
   position: absolute;
-  top: 0;
-  width: 100%;
-  height: 1rem;
-  text-align: center;
-  line-height: 1rem;
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-}
-#pin-fillform .title {
-  font-size: 0.26rem;
-  color: #6b6b6b;
-  text-align: center;
-  margin: 0.3rem auto 0.6rem;
-}
-#pin-fillform #form-contact {
-  position: relative;
-  z-index: 2;
-  width: 80vw;
-  margin: 0 auto;
-  font-size: 0.26rem;
-  color: #6b6b6b;
-}
-#pin-fillform #form-contact .input-box {
-  position: relative;
-  margin-bottom: 0.2rem;
-  text-align: center;
-}
-#pin-fillform #form-contact .input-box input[type="text"],
-#pin-fillform #form-contact .input-box input[type="tel"],
-#pin-fillform #form-contact .input-box select {
-  display: inline-block;
-  width: 100%;
-  padding: 0.15rem 0;
-  font-size: 0.26rem;
-  text-align: center;
-  border: none;
-  background: transparent;
-  border-bottom: #a4b3e7 1px solid;
-  mask-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 15%, #ffffff 50%, #ffffff 85%, rgba(255, 255, 255, 0) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  -webkit-mask-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 15%, #ffffff 50%, #ffffff 85%, rgba(255, 255, 255, 0) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  -webkit-mask-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 15%, white 50%, white 85%, rgba(255, 255, 255, 0) 100%);
-  /* Chrome10-25,Safari5.1-6 */
-}
-#pin-fillform #form-contact .select-box {
-  position: relative;
-}
-#pin-fillform #form-contact .select-box input[type="text"] {
-  position: relative;
-  z-index: 1;
-}
-#pin-fillform #form-contact .select-box select {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  opacity: 0;
-}
-#pin-fillform #form-contact .input-box-city-district .select-box {
-  display: inline-block;
-  width: 48%;
-}
-#pin-fillform #form-contact .btn-submit {
-  margin-top: 0.6rem;
-}
-#pin-fillform .foreground {
-  position: absolute;
-  left: 0;
-  z-index: 1;
-  bottom: -1.2rem;
-  width: 5.52rem;
-  height: 4.57rem;
-}
-
-#pin-gift .title {
-  color: #6b6b6b;
-  font-size: 0.4rem;
-}
-#pin-gift .des {
-  top: 35%;
-  width: 4.6rem;
-  text-align: center;
-  font-size: 0.26rem;
-}
-#pin-gift .prize-item {
-  display: none;
-  color: #6b6b6b;
-}
-#pin-gift .prize-item.show {
-  display: block;
-}
-#pin-gift .prize-item .tip {
-  display: block;
-  margin-top: 0.5rem;
-  font-size: 0.22rem;
-}
-#pin-gift .b-img {
-  position: absolute;
-  left: 0;
   bottom: 0;
-  width: 100%;
-}
-#pin-gift .name {
-  margin-top: 0.8rem;
-  font-size: 0.22rem;
-  color: #6b6b6b;
-}
-#pin-gift .btn-getproduct {
-  width: 4.6rem;
-  height: 1.4rem;
-  box-sizing: border-box;
-  padding-top: 0.22rem;
+  left: 50%;
+  margin-left: -0.68rem;
+  z-index: 6;
 }
 
-.guide-share {
+#pin-product {
+  min-height: 100vh;
+}
+
+#pin-landing {
+  min-height: 100vh;
+}
+#pin-landing .people {
   position: absolute;
-  top: -2rem;
+  top: 50%;
   right: 0;
-  -webkit-transform: translate(-20px, 20px);
-  -moz-transform: translate(-20px, 20px);
-  -ms-transform: translate(-20px, 20px);
-  -o-transform: translate(-20px, 20px);
-  transform: translate(-20px, 20px);
-  width: 1.1rem;
-  height: 1.04rem;
-  -webkit-transform-origin: 50% 0;
-  -moz-transform-origin: 50% 0;
-  -ms-transform-origin: 50% 0;
-  -o-transform-origin: 50% 0;
-  transform-origin: 50% 0;
-  -webkit-animation: lefttoright 2s 1 forwards;
-  -moz-animation: lefttoright 2s 1 forwards;
-  animation: lefttoright 2s 1 forwards;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
-@-webkit-keyframes lefttoright {
-  0% {
-    -webkit-transform: translate(-20px, 20px);
-  }
-  100% {
-    -webkit-transform: translate(0px, 0px);
-  }
-}
-@-moz-keyframes lefttoright {
-  0% {
-    -moz-transform: translate(-20px, 20px);
-  }
-  100% {
-    -moz-transform: translate(0px, 0px);
-  }
-}
-@-o-keyframes lefttoright {
-  0% {
-    -o-transform: translate(-20px, 20px);
-  }
-  100% {
-    -o-transform: translate(0px, 0px);
-  }
-}
-@keyframes lefttoright {
-  0% {
-    -webkit-transform: translate(-20px, 20px);
-    transform: translate(-20px, 20px);
-  }
-  100% {
-    -webkit-transform: translate(0px, 0px);
-    transform: translate(0px, 0px);
-  }
-}
-.share-popup .right-star {
-  right: 0.7rem;
-  top: 0.7rem;
-}
-.share-popup .des {
-  padding-top: 0.8rem;
+#pin-landing .tip-wrap {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
   text-align: center;
-  font-size: 0.26rem;
+  font-size: 0.28rem;
   color: #fff;
+  line-height: 1.4;
 }
-.share-popup .des .bigfont {
-  display: block;
-  font-size: 0.32rem;
+#pin-landing .tip-wrap .tip {
   margin-bottom: 0.2rem;
 }
-
-#pin-follow .qrcode {
-  width: 3.05rem;
-  height: 3.06rem;
-  margin: 0.8rem auto 0.5rem;
-}
-#pin-follow .qrcode-des {
-  width: 3.27rem;
-  height: 1.13rem;
-  margin: 0 auto;
-}
-#pin-follow .foreground {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 5.52rem;
+#pin-landing .tip-wrap .terms-link {
+  font-size: 0.24rem;
+  text-decoration: underline;
 }

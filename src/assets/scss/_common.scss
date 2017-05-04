@@ -74,11 +74,11 @@ p{
 }
 
 .logo{
-  position: absolute;
-  top: 0.4rem;
-  z-index: 10;
-  left: 50%;
-  @include transform(translate(-50%));
+  //position: absolute;
+  //top: 0.4rem;
+  //z-index: 10;
+  //left: 50%;
+  //@include transform(translate(-50%));
 }
 
 .btn{
