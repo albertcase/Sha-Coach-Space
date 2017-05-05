@@ -49,12 +49,12 @@
                 //need calculate first
                 self.calculateImgSize();
 
-                var containerHeight = $('.container').height(),
-                    curWindowHeight = $(window).height(),
-                    curPosY = curWindowHeight - containerHeight;
+                //var containerHeight = $('.container').height(),
+                //    curWindowHeight = $(window).height(),
+                    //curPosY = curWindowHeight - containerHeight;
 
                 //$('.container').css('transform','translateY('+curPosY+'px)');
-                self.bindEvent();
+                //self.bindEvent();
 
 
             }
@@ -72,7 +72,7 @@
             self.doFlyAniStart();
         });
 
-    //    play audio
+        //    play audio
         var audioEle = document.getElementById('bgm');
         audioEle.load();
         //audioEle.play();
@@ -109,7 +109,7 @@
     //doFlyAni
     controller.prototype.doFlyAniStart = function(){
         var self = this;
-    //    hide logo
+        //    hide logo
         $('.pin-1 .logo').addClass('fadeout');
         $('.container').addClass('active');
         $('.container').css('transform','translateY(0px)');
