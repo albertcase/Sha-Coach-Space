@@ -72,6 +72,28 @@
             self.doFlyAniStart();
         });
 
+    //    play audio
+        var audioEle = document.getElementById('bgm');
+        audioEle.load();
+        audioEle.play();
+        $('#bgm').on('play',function(){
+            $('.icon-bgm').addClass('play');
+        });
+        $('#bgm').on('pause',function(){
+            $('.icon-bgm').removeClass('play');
+        });
+        var isPlaying = false;
+        $('.icon-bgm').on('touchstart',function(){
+            //$(this).toggleClass('play');
+            if(isPlaying){
+                audioEle.pause();
+                isPlaying=false;
+            }else{
+                audioEle.play();
+                isPlaying=true;
+            }
+        });
+
     };
 
     //calculate all img size
@@ -104,6 +126,7 @@
         },perTime*1);
 
         $('.bg').css('transform','translateY('+curPosY+')');
+
         var showBtn = setTimeout(function(){
             $('.btn-golists').addClass('active fade');
             $('.air-plane').addClass('hide fadeoutnow');

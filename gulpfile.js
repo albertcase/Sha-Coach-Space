@@ -58,6 +58,9 @@ var path = {
         './src/assets/*/*.{png,jpg,jpeg}',
         './src/assets/*/*/*.{png,jpg,jpeg}'
     ],
+    audio:[
+        './src/assets/audio/*'
+    ],
 };
 // Browser-sync
 gulp.task('browser-sync', function() {
@@ -86,6 +89,13 @@ gulp.task('css',['clean'],function () {
         .pipe(minify())
         // 3. 另存为压缩文件
         .pipe(gulp.dest('./src/dist/css'));
+});
+
+//audio
+gulp.task('audio',['clean'],function () {
+    // 1. 找到文件
+    gulp.src(path.audio)
+        .pipe(gulp.dest('./src/dist/audio'));
 });
 
 // Concatenate & Minify
@@ -122,11 +132,12 @@ gulp.task("tinypng", function(){
 // Watch Files For Changes
 gulp.task('watch', ['clean'],function() {
     gulp.watch(path.css,['css']);
+    gulp.watch(path.audio,['audio']);
     gulp.watch(path.newFollowJs,['scripts_newfollow']);
     gulp.watch(path.followedJs,['scripts_followed']);
 });
 
 // Default Task
-gulp.task('default', ['watch', 'css','scripts_newfollow','scripts_followed','browser-sync']);
+gulp.task('default', ['watch', 'css','scripts_newfollow','scripts_followed','audio','browser-sync']);
 
 
