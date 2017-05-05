@@ -444,6 +444,10 @@ p{
   100% {opacity:1;}
 }
 
+.fadeout{
+  @include fadeOut();
+}
+
 /*For landscape style*/
 @-webkit-keyframes rotation {
   10% { transform: rotate(90deg); -webkit-transform: rotate(90deg) }

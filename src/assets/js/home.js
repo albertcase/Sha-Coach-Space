@@ -52,14 +52,25 @@
                 var containerHeight = $('.container').height(),
                     curWindowHeight = $(window).height(),
                     curPosY = curWindowHeight - containerHeight;
-                console.log(containerHeight+'curWindowHeight'+curWindowHeight+'poy'+curPosY);
 
                 $('.container').css('transform','translateY('+curPosY+'px)');
+                self.bindEvent();
 
 
             }
         });
 
+
+    };
+
+    //Bind Event
+    controller.prototype.bindEvent = function(){
+        console.log(2);
+        var self = this;
+
+        $('.air-plane').on('touchstart',function(){
+            self.doFlyAniStart();
+        });
 
     };
 
@@ -73,19 +84,40 @@
         };
     };
 
+    //doFlyAni
+    controller.prototype.doFlyAniStart = function(){
+        var self = this;
+    //    hide logo
+        $('.pin-1 .logo').addClass('fadeout');
+        $('.container').addClass('active');
+        $('.container').css('transform','translateY(0px)');
+        $('.bg').addClass('active');
+        var containerHeight = $('.container').height(),
+            curWindowHeight = $(window).height(),
+            curPosY = containerHeight - curWindowHeight + 'px';
+        var screenNum = parseInt(containerHeight / curWindowHeight);
+        var totalTime = 20,
+            perTime = totalTime * 1000 / screenNum;
+
+        var addClassForScreen_1 = setTimeout(function(){
+
+        },perTime*1);
+
+        $('.bg').css('transform','translateY('+curPosY+')');
+        var showBtn = setTimeout(function(){
+            $('.btn-golists').addClass('active fade');
+            $('.air-plane').addClass('hide fadeoutnow');
+        },20000);
+
+
+    };
+
     controller.prototype.startUp = function(){
         var self = this;
         $('.preload').remove();
         $('.wrapper').addClass('fade');
         //console.log(self.hasShared);
         self.bindEvent();
-    };
-    //bind Events
-    controller.prototype.bindEvent = function(){
-        var self = this;
-        //show and hide terms pop
-
-
     };
 
 

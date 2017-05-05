@@ -549,6 +549,48 @@ p {
     opacity: 1;
   }
 }
+.fadeout {
+  -webkit-animation: fadeOut 1s ease 0.2s 1 both;
+  -moz-animation: fadeOut 1s ease 0.2s 1 both;
+  animation: fadeOut 1s ease 0.2s 1 both;
+  -webkit-animation-backface-visibility: hidden;
+  -moz-animation-backface-visibility: hidden;
+  -ms-animation-backface-visibility: hidden;
+  -o-animation-backface-visibility: hidden;
+  animation-backface-visibility: hidden;
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /*For landscape style*/
 @-webkit-keyframes rotation {
   10% {
@@ -747,6 +789,7 @@ body {
 
 .pin {
   position: relative;
+  z-index: 1;
 }
 
 .btn {
@@ -766,8 +809,6 @@ body {
 }
 
 .wrapper {
-  background: url("../images/bg.jpg") repeat-y;
-  background-size: 100%;
   position: absolute;
   left: 0;
   top: 0;
@@ -776,18 +817,55 @@ body {
   overflow: hidden;
 }
 
-.container {
-  transform: translateY(0);
+.container.active {
+  -moz-transition: all 20s linear;
+  -o-transition: all 20s linear;
+  -webkit-transition: all 20s linear;
+  transition: all 20s linear;
+}
+.container .bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 200%;
+  background: url("../images/bg.jpg") repeat-y;
+  background-size: 100%;
+}
+.container .bg.active {
+  -moz-transition: all 26s linear;
+  -o-transition: all 26s linear;
+  -webkit-transition: all 26s linear;
+  transition: all 26s linear;
 }
 
 /*============
 ================
 */
 .air-plane {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 50%;
   margin-left: -0.68rem;
+  z-index: 6;
+}
+.air-plane.fadeoutnow {
+  z-index: -1;
+}
+
+.btn-golists {
+  opacity: 0;
+  position: fixed;
+  bottom: 0.6rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.btn-golists.active {
   z-index: 6;
 }
 
