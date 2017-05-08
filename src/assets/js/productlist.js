@@ -54,6 +54,7 @@
                     //curPosY = curWindowHeight - containerHeight;
 
                 //$('.container').css('transform','translateY('+curPosY+'px)');
+                self.showAllProduct();
                 self.bindEvent();
             //
 
@@ -73,9 +74,38 @@
             //$('body').append('<div class="popup show">dkdkkdk</div>');
         });
 
+        //close the tang-popup
+        $('#tang-popup .btn-close').on('touchstart',function(){
+            $('#tang-popup').removeClass('show');
+            //clear the item
+            $('#tang-popup .swiper-wrapper').html('');
+        });
     };
 
-    //
+    //show all product lists
+    controller.prototype.showAllProduct = function(){
+
+        var allItemHtml = '';
+        productListJson.forEach(function(item,index){
+            allItemHtml = allItemHtml + '<li class="item item-1">'+
+                '<div class="p-img">'+
+                '<img src="'+item.imgSrc+'" alt="coach"/>'+
+                '</div>'+
+                '<div class="p-name">'+item.name+'</div>'+
+                '<div class="p-price">'+item.price+'</div>'+
+                '<div class="p-btn">'+
+                '<span class="btn btn-buy">'+
+                '<a href="'+item.buylink+'">立即选购</a>'+
+                '</span>'+
+                '<span class="btn btn-tang" data-id="'+item.id+'"style="display:'+(item.isShowTang?"block":"none")+'">唐嫣同款搭配</span>'+
+                '</div>'+
+                '</li>'
+        });
+        $('.product-list').html(allItemHtml);
+
+    };
+
+    //tang pop swiper effect
     controller.prototype.showTangPop = function(id){
         var self = this;
         $('#tang-popup').addClass('show');
@@ -111,42 +141,13 @@
         };
     };
 
-    //doFlyAni
-    controller.prototype.doFlyAniStart = function(){
-        var self = this;
-        //    hide logo
-        $('.pin-1 .logo').addClass('fadeout');
-        $('.container').addClass('active');
-        $('.container').css('transform','translateY(0px)');
-        $('.bg').addClass('active');
-        var containerHeight = $('.container').height(),
-            curWindowHeight = $(window).height(),
-            curPosY = containerHeight - curWindowHeight + 'px';
-        var screenNum = parseInt(containerHeight / curWindowHeight);
-        var totalTime = 20,
-            perTime = totalTime * 1000 / screenNum;
-
-        var addClassForScreen_1 = setTimeout(function(){
-
-        },perTime*1);
-
-        $('.bg').css('transform','translateY('+curPosY+')');
-
-        var showBtn = setTimeout(function(){
-            $('.btn-golists').addClass('active fade');
-            $('.air-plane').addClass('hide fadeoutnow');
-        },20000);
-
-
-    };
-
-    controller.prototype.startUp = function(){
-        var self = this;
-        $('.preload').remove();
-        $('.wrapper').addClass('fade');
-        //console.log(self.hasShared);
-        self.bindEvent();
-    };
+    //controller.prototype.startUp = function(){
+    //    var self = this;
+    //    $('.preload').remove();
+    //    $('.wrapper').addClass('fade');
+    //    //console.log(self.hasShared);
+    //    self.bindEvent();
+    //};
 
 
 
