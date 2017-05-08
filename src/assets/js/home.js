@@ -123,7 +123,7 @@
 
         var addClassForScreen_1 = setTimeout(function(){
 //add 'fade delay' class for each ani-product element
-            for(var z=1;z<$('.ani-product').length;z++){
+            for(var z=0;z<$('.ani-product').length;z++){
                 $('.ani-product-'+(11-z)).addClass('fade delay'+z);
             };
         },5000);
