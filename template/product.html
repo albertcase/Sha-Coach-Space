@@ -12,15 +12,15 @@
     <script src="http://kenzowechat.samesamechina.com/weixin/jssdkforsite?debug=1"></script>
     <script src="../src/assets/js/lib/zepto.min.js"></script>
     <script src="../src/assets/js/lib/pre-loader.js"></script>
-    <!--<script src="../src/assets/js/lib/cookie.js"></script>-->
+    <script src="../src/assets/js/lib/swiper.min.js"></script>
     <script src="../src/assets/js/rem.js"></script>
-    <!--<script src="../src/assets/js/region.js"></script>-->
+    <script src="../src/assets/js/productjson.js"></script>
     <script src="../src/assets/js/common.js"></script>
     <!--<script src="../src/assets/js/api.js"></script>-->
     <!--<script src="../src/assets/js/wxshare.js"></script>-->
-    <script src="../src/assets/js/home.js"></script>
+    <script src="../src/assets/js/singleproduct.js"></script>
 </head>
-<body class="page-home">
+<body class="page-product">
 <div id="orientLayer" class="mod-orient-layer">
     <div class="mod-orient-layer__content">
         <i class="icon mod-orient-layer__icon-orient"></i>
@@ -34,107 +34,45 @@
 <!--</div>-->
 <!--main content-->
 <!-- 已关注 -->
-<div class="wrapper animate">
-    <div class="container">
-        <div class="bg"></div>
-        <!-- product show-->
-        <div class="pin pin-2" id="pin-product">
-            <div class="logo animate">
-                <img src="../src/dist/images/logo.png" alt="coach"/>
-            </div>
-            <div class="animate ani-product ani-product-1">
-                <img src="../src/dist/images/product-1.png" alt="coach"/>
-            </div>
-            <div class="animate ani-product ani-product-2">
-                <img src="../src/dist/images/product-2.png" alt="coach"/>
-            </div>
-            <div class="animate ani-product ani-product-3">
-                <img src="../src/dist/images/product-3.png" alt="coach"/>
-            </div>
-            <div class="animate ani-product ani-product-4">
-                <img src="../src/dist/images/product-4.png" alt="coach"/>
-            </div>
-            <div class="animate ani-product ani-product-5">
-                <img src="../src/dist/images/product-5.png" alt="coach"/>
-            </div>
-            <div class="animate ani-product ani-product-6">
-                <img src="../src/dist/images/product-6.png" alt="coach"/>
-            </div>
-            <div class="animate ani-product ani-product-7">
-                <img src="../src/dist/images/product-7.png" alt="coach"/>
-            </div>
-            <div class="animate ani-product ani-product-8">
-                <img src="../src/dist/images/product-8.png" alt="coach"/>
-            </div>
-            <div class="animate ani-product ani-product-9">
-                <img src="../src/dist/images/product-9.png" alt="coach"/>
-            </div>
-            <div class="animate ani-product ani-product-10">
-                <img src="../src/dist/images/product-10.png" alt="coach"/>
-            </div>
-            <div class="animate ani-product ani-product-11">
-                <img src="../src/dist/images/product-11.png" alt="coach"/>
+<div class="wrapper animate" id="product-wrap">
+    <div class="logo">
+        <img src="../src/dist/images/logo.png" alt="coach"/>
+    </div>
+    <div class="star-1">
+        <img src="../src/dist/images/star-1.png" alt="coach"/>
+    </div>
+    <!--<ul class="product-list clearfix">-->
+        <!--&lt;!&ndash; show all product list&ndash;&gt;-->
+    <!--</ul>-->
+    <div id="product-swiper-wrap">
+        <div class="swiper-container" id="product-swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <img src="" alt=""/>
+                </div>
+                <!--<div class="swiper-slide">Slide 2</div>-->
+                <!--<div class="swiper-slide">Slide 3</div>-->
             </div>
         </div>
-        <!-- landing page, show first-->
-        <div class="pin pin-1 pin-landing" id="pin-landing">
-            <div class="icon-bgm"></div>
-            <audio id="bgm" src="/src/dist/audio/intro.m4a" preload="auto" loop></audio>
-            <div class="logo animate">
-                <img src="../src/dist/images/logo.png" alt="coach"/>
-            </div>
-            <div class="people">
-                <img src="../src/dist/images/people.png" alt="coach"/>
-            </div>
-            <div class="ani ani-1">
-                <img src="../src/dist/images/ani-1.png" alt="coach"/>
-            </div>
-            <div class="ani ani-2">
-                <img src="../src/dist/images/ani-2.png" alt="coach"/>
-            </div>
-            <div class="tip-wrap">
-                <p class="tip">
-                    点击小火箭<br>
-                    去太空游览SPACE系列
-                </p>
-                <div class="terms-link">活动条款</div>
-            </div>
-
-        </div>
-
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
-    <div class="animate air-plane">
-        <img src="../src/dist/images/air-plane.png" alt="coach"/>
+    <div class="p-name">dkkd</div>
+    <div class="p-price">1222</div>
+    <div class="p-btn">
+        <span class="btn btn-back">
+            <a href="index.html">返回</a>
+        </span>
+        <span class="btn btn-buy">
+            <a href="#">立即选购</a>
+        </span>
     </div>
-    <div class="animate btn btn-golists">查看全部产品</div>
+
+
 </div>
 
-<!-- z-index is high-->
-<div class="popup terms-pop">
-    <div class="inner">
-        <h3 class="title">活动条款</h3>
-        <div class="pcontent">
-            <h4 class="subtitle">活动时间</h4>
-            <p class="des">
-                2017年5月4日至2017年7月1日
-            </p>
-            <h4 class="subtitle">参与条件</h4>
-            <p class="des">
-                活动期间，关注KenzoParfums凯卓官方微信的<br>
-                用户将活动分享给好友<br>
-                即可参与抽奖（随机抽取）<br>
-                每个微信ID仅限中奖一次；奖品限量20份
-            </p>
-            <h4 class="subtitle">奖品内容</h4>
-            <p class="des">
-                奖品为KENZO睡美人面膜*（75ML）<br>
-                根据用户填写的邮寄地址<br>
-                在中奖后的30个工作日内寄送
-            </p>
-            <p class="product-name">* KENZO花颜舒柔夜间修护面膜</p>
-        </div>
-        <div class="btn-close">X</div>
-    </div>
-</div>
 </body>
 </html>

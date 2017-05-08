@@ -233,7 +233,8 @@ body{
 
 
 //for productlist page
-body.page-productlist{
+body.page-productlist,
+body.page-product{
   .wrapper{
     height: auto;
     overflow: visible;
@@ -372,6 +373,66 @@ body.page-productlist{
   .btn-close{
     &:before,&:after{
       background: #000;
+    }
+  }
+}
+
+
+//for product page
+#product-wrap{
+  @include fullabsolute(0,0,100%,100%,1);
+  .star-1{
+    @include fullabsolute(-0.8rem,-0.8rem,2.7rem,2.7rem,1);
+  }
+  #product-swiper-wrap{
+    position: relative;
+    .swiper-button-prev{
+      left: 0.3rem;
+      background: transparent;
+      @include size(0.4rem,0.4rem);
+      border-top: #fff 2px solid;
+      border-left: #fff 2px solid;
+      @include transform(rotate(-45deg));
+    }
+    .swiper-button-next{
+      right: 0.3rem;
+      background: transparent;
+      @include size(0.4rem,0.4rem);
+      border-top: #fff 2px solid;
+      border-right: #fff 2px solid;
+      @include transform(rotate(45deg));
+    }
+  }
+  #product-swiper{
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .p-name,
+  .p-price{
+    font-size: 0.28rem;
+    color: #fff;
+    text-align: center;
+  }
+  .p-name{
+    font-size: 0.3rem;
+    margin-bottom: 0.2rem;
+  }
+  .p-btn{
+    margin-top: 1.2rem;
+    text-align: center;
+    .btn{
+      display: inline-block;
+      @include size(2.5rem,0.6rem);
+      margin: 0 0.2rem;
+      background: #fff;
+    }
+    a{
+      display: block;
+      font-size: 0.24rem;
+      color: #000;
+      text-decoration: none;
+      background: #fff;
+      text-align: center;
     }
   }
 }
