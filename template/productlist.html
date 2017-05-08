@@ -12,6 +12,7 @@
     <script src="http://kenzowechat.samesamechina.com/weixin/jssdkforsite?debug=1"></script>
     <script src="../src/assets/js/lib/zepto.min.js"></script>
     <script src="../src/assets/js/lib/pre-loader.js"></script>
+    <script src="../src/assets/js/lib/swiper.min.js"></script>
     <script src="../src/assets/js/rem.js"></script>
     <script src="../src/assets/js/productjson.js"></script>
     <script src="../src/assets/js/common.js"></script>
@@ -51,7 +52,7 @@
                     <span class="btn btn-buy">
                         <a href="#">立即选购</a>
                     </span>
-                <span class="btn btn-tang">唐嫣同款搭配</span>
+                <span class="btn btn-tang" data-id="2">唐嫣同款搭配</span>
             </div>
         </li>
         <li class="item item-1">
@@ -64,7 +65,7 @@
                     <span class="btn btn-buy">
                         <a href="#">立即选购</a>
                     </span>
-                <span class="btn btn-tang">唐嫣同款搭配</span>
+                <span class="btn btn-tang" data-id="0">唐嫣同款搭配</span>
             </div>
         </li>
         <li class="item item-1">
@@ -95,5 +96,30 @@
         </li>
     </ul>
 </div>
+<!--show pop-->
+<div id="tang-popup" class="popup">
+    <div class="inner">
+        <div class="pcontent">
+            <div class="swiper-container" id="product-list-swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <!--<div class="swiper-slide">Slide 1</div>-->
+                    <!--<div class="swiper-slide">Slide 2</div>-->
+                    <!--<div class="swiper-slide">Slide 3</div>-->
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="btn btn-buy">
+                <a href="#">立即选购</a>
+            </div>
+        </div>
+        <div class="btn-close">X</div>
+    </div>
+</div>
+
 </body>
 </html>

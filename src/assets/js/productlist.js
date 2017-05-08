@@ -54,8 +54,8 @@
                     //curPosY = curWindowHeight - containerHeight;
 
                 //$('.container').css('transform','translateY('+curPosY+'px)');
-                //self.bindEvent();
-
+                self.bindEvent();
+            //
 
             }
         });
@@ -65,36 +65,41 @@
 
     //Bind Event
     controller.prototype.bindEvent = function(){
-        console.log(2);
         var self = this;
-
-        $('.air-plane').on('touchstart',function(){
-            self.doFlyAniStart();
-        });
-
-        //    play audio
-        var audioEle = document.getElementById('bgm');
-        audioEle.load();
-        //audioEle.play();
-        $('#bgm').on('play',function(){
-            $('.icon-bgm').addClass('play');
-        });
-        $('#bgm').on('pause',function(){
-            $('.icon-bgm').removeClass('play');
-        });
-        var isPlaying = false;
-        $('.icon-bgm').on('touchstart',function(){
-            //$(this).toggleClass('play');
-            if(isPlaying){
-                audioEle.pause();
-                isPlaying=false;
-            }else{
-                audioEle.play();
-                isPlaying=true;
-            }
+        $('.btn-tang').on('touchstart',function(){
+            console.log(1);
+            var curId = $(this).attr('data-id');
+            self.showTangPop(curId);
+            //$('body').append('<div class="popup show">dkdkkdk</div>');
         });
 
     };
+
+    //
+    controller.prototype.showTangPop = function(id){
+        var self = this;
+        $('#tang-popup').addClass('show');
+
+        var listHtml = '';
+        var curImgArray = productListJson[id].slideTangImg;
+        curImgArray.forEach(function(item,index){
+            listHtml = listHtml +'<div class="swiper-slide"><img src="'+item+'"></div>';
+        });
+        $('#tang-popup .swiper-wrapper').html(listHtml);
+        var mySwiper = new Swiper ('#product-list-swiper', {
+            // Optional parameters
+            loop: true,
+
+            // Navigation arrows
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+        });
+    //    change the buy button link
+        console.log(productListJson[id].buylink);
+        $('#tang-popup .btn-buy a').attr('href',productListJson[id].buylink);
+
+    };
+
 
     //calculate all img size
     controller.prototype.calculateImgSize = function(){
