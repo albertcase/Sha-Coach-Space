@@ -1466,19 +1466,24 @@ body.page-productlist .wrapper {
   background-size: 100%;
 }
 
+#product-list-wrap {
+  max-width: 100%;
+  overflow: hidden;
+}
 #product-list-wrap .star-1 {
   position: absolute;
   left: -0.8rem;
   top: -0.8rem;
   z-index: 1;
-  width: auto;
-  height: auto;
+  width: 2.7rem;
+  height: 2.7rem;
 }
 #product-list-wrap .product-list {
   width: 6.6rem;
-  margin: 0 auto;
+  margin: 1rem auto 0;
 }
 #product-list-wrap .product-list .item {
+  position: relative;
   width: 3rem;
   height: 6rem;
   display: block;
@@ -1489,6 +1494,17 @@ body.page-productlist .wrapper {
 }
 #product-list-wrap .product-list .item:nth-child(2n+1) {
   float: left;
+}
+#product-list-wrap .product-list .item.item-3:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -1.5rem;
+  right: -1rem;
+  width: 2rem;
+  height: 1.77rem;
+  background: url("../images/star-2.png") no-repeat;
+  background-size: 100%;
 }
 #product-list-wrap .product-list .p-img {
   width: 2.94rem;

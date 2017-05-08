@@ -47,7 +47,7 @@
             onComplete: function(){
 
                 //need calculate first
-                self.calculateImgSize();
+                //self.calculateImgSize();
 
                 //var containerHeight = $('.container').height(),
                 //    curWindowHeight = $(window).height(),
@@ -87,7 +87,7 @@
 
         var allItemHtml = '';
         productListJson.forEach(function(item,index){
-            allItemHtml = allItemHtml + '<li class="item item-1">'+
+            allItemHtml = allItemHtml + '<li class="item item-'+index+'">'+
                 '<div class="p-img">'+
                 '<img src="'+item.imgSrc+'" alt="coach"/>'+
                 '</div>'+
