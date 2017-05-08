@@ -54,7 +54,11 @@
                 //curPosY = curWindowHeight - containerHeight;
 
                 //$('.container').css('transform','translateY('+curPosY+'px)');
-                self.showProduct(1);
+                var curPid = parseInt(Common.getParameterByName('id'));
+                //limit the product id
+                curPid = (curPid>-1 && curPid<11)?curPid:0;
+                console.log(curPid);
+                self.showProduct(curPid);
                 self.bindEvent();
                 //
 
@@ -67,19 +71,8 @@
     //Bind Event
     controller.prototype.bindEvent = function(){
         var self = this;
-        $('.btn-tang').on('touchstart',function(){
-            console.log(1);
-            var curId = $(this).attr('data-id');
-            self.showTangPop(curId);
-            //$('body').append('<div class="popup show">dkdkkdk</div>');
-        });
 
-        //close the tang-popup
-        $('#tang-popup .btn-close').on('touchstart',function(){
-            $('#tang-popup').removeClass('show');
-            //clear the item
-            $('#tang-popup .swiper-wrapper').html('');
-        });
+
     };
 
     //show all product lists
@@ -124,9 +117,13 @@
             nextButton: '.swiper-button-next',
             prevButton: '.swiper-button-prev',
         });
+        //update name
+        $('#product-wrap .p-name').html(productListJson[id].name);
+        //update price
+        $('#product-wrap .p-price').html(productListJson[id].price);
+
         //    change the buy button link
-        console.log(productListJson[id].buylink);
-        $('#tang-popup .btn-buy a').attr('href',productListJson[id].buylink);
+        $('#product-wrap .btn-buy a').attr('href',productListJson[id].buylink);
 
     };
 

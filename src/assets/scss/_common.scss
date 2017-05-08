@@ -439,6 +439,14 @@ p{
   animation-name: fade;
   -webkit-animation-name: fade;
 }
+
+//delay for product
+@for $i from 1 through 11 {
+  .delay#{$i}{
+    animation-delay: 1500ms * $i;
+  }
+}
+
 @include keyframes(fade){
   0%   {opacity:0;}
   100% {opacity:1;}

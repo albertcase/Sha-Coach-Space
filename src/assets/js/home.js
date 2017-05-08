@@ -53,7 +53,7 @@
                     curWindowHeight = $(window).height(),
                     curPosY = curWindowHeight - containerHeight;
 
-                //$('.container').css('transform','translateY('+curPosY+'px)');
+                $('.container').css('transform','translateY('+curPosY+'px)');
                 self.bindEvent();
 
 
@@ -122,8 +122,11 @@
             perTime = totalTime * 1000 / screenNum;
 
         var addClassForScreen_1 = setTimeout(function(){
-
-        },perTime*1);
+//add 'fade delay' class for each ani-product element
+            for(var z=1;z<$('.ani-product').length;z++){
+                $('.ani-product-'+(11-z)).addClass('fade delay'+z);
+            };
+        },5000);
 
         $('.bg').css('transform','translateY('+curPosY+')');
 
@@ -131,6 +134,8 @@
             $('.btn-golists').addClass('active fade');
             $('.air-plane').addClass('hide fadeoutnow');
         },20000);
+
+
 
 
     };

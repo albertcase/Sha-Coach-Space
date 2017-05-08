@@ -191,7 +191,11 @@ body{
 //for pin-product
 #pin-product{
   min-height: 100vh;
-
+  text-align: center;
+  .ani-product {
+    display: inline-block;
+    opacity: 0;
+  }
 }
 
 //pin-landing
@@ -201,6 +205,7 @@ body{
     position: absolute;
     top: 50%;
     right: 0;
+    z-index: 2;
     @include transform(translateY(-50%));
   }
   .tip-wrap{
@@ -221,7 +226,7 @@ body{
     }
   }
   .icon-bgm{
-    position: absolute;
+    position: fixed;
     right: 0.2rem;
     top: 0.2rem;
     z-index: $z-index-2;
@@ -229,6 +234,20 @@ body{
     background: url("../images/icon-music.png") no-repeat;
     background-size: 100%;
   }
+  .ani{
+    z-index: 1;
+  }
+  .ani-1{
+    position: absolute;
+    right: 0;
+    top: 1.6rem;
+  }
+  .ani-2{
+    position: absolute;
+    left: -0.6rem;
+    bottom: 2rem;
+  }
+
 }
 
 

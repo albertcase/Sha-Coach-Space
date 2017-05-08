@@ -517,6 +517,50 @@ p {
   -webkit-animation-name: fade;
 }
 
+.delay1 {
+  animation-delay: 1500ms;
+}
+
+.delay2 {
+  animation-delay: 3000ms;
+}
+
+.delay3 {
+  animation-delay: 4500ms;
+}
+
+.delay4 {
+  animation-delay: 6000ms;
+}
+
+.delay5 {
+  animation-delay: 7500ms;
+}
+
+.delay6 {
+  animation-delay: 9000ms;
+}
+
+.delay7 {
+  animation-delay: 10500ms;
+}
+
+.delay8 {
+  animation-delay: 12000ms;
+}
+
+.delay9 {
+  animation-delay: 13500ms;
+}
+
+.delay10 {
+  animation-delay: 15000ms;
+}
+
+.delay11 {
+  animation-delay: 16500ms;
+}
+
 @-webkit-keyframes fade {
   0% {
     opacity: 0;
@@ -1412,6 +1456,11 @@ body {
 
 #pin-product {
   min-height: 100vh;
+  text-align: center;
+}
+#pin-product .ani-product {
+  display: inline-block;
+  opacity: 0;
 }
 
 #pin-landing {
@@ -1421,6 +1470,7 @@ body {
   position: absolute;
   top: 50%;
   right: 0;
+  z-index: 2;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -1449,7 +1499,7 @@ body {
   text-decoration: underline;
 }
 #pin-landing .icon-bgm {
-  position: absolute;
+  position: fixed;
   right: 0.2rem;
   top: 0.2rem;
   z-index: 2;
@@ -1457,6 +1507,19 @@ body {
   height: 0.57rem;
   background: url("../images/icon-music.png") no-repeat;
   background-size: 100%;
+}
+#pin-landing .ani {
+  z-index: 1;
+}
+#pin-landing .ani-1 {
+  position: absolute;
+  right: 0;
+  top: 1.6rem;
+}
+#pin-landing .ani-2 {
+  position: absolute;
+  left: -0.6rem;
+  bottom: 2rem;
 }
 
 body.page-productlist .wrapper,
