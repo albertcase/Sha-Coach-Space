@@ -31,10 +31,27 @@
 
         var baseurl = ''+'/src/dist/images/';
         var imagesArray = [
-            baseurl + 'logo.png'
+            baseurl + 'logo.png',
+            baseurl + 'product-1.png',
+            baseurl + 'product-2.png',
+            baseurl + 'product-3.png',
+            baseurl + 'product-4.png',
+            baseurl + 'product-5.png',
+            baseurl + 'product-6.png',
+            baseurl + 'product-7.png',
+            baseurl + 'product-8.png',
+            baseurl + 'product-9.png',
+            baseurl + 'product-10.png',
+            baseurl + 'product-11.png',
+            baseurl + 'air-plane.png',
+            baseurl + 'ani-1.png',
+            baseurl + 'ani-2.png',
+            baseurl + 'ani-3.png',
+            baseurl + 'bg.jpg',
+            baseurl + 'icon-music.png',
+            baseurl + 'people.png'
         ];
 
-        imagesArray = imagesArray.concat(self.loadingImg);
         var i = 0,j= 0;
         new preLoader(imagesArray, {
             onProgress: function(){
