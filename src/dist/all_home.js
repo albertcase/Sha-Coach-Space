@@ -566,7 +566,7 @@ $(document).ready(function(){
                     curWindowHeight = $(window).height(),
                     curPosY = curWindowHeight - containerHeight;
 
-                $('.container').css('transform','translateY('+curPosY+'px)');
+                //$('.container').css('transform','translateY('+curPosY+'px)');
                 self.bindEvent();
 
 
@@ -637,7 +637,7 @@ $(document).ready(function(){
         var addClassForScreen_1 = setTimeout(function(){
 //add 'fade delay' class for each ani-product element
             for(var z=0;z<$('.ani-product').length;z++){
-                $('.ani-product-'+(11-z)).addClass('active delay'+z);
+                $('.ani-product-'+(10-z)).addClass('active delay'+z);
             };
         },5000);
 
