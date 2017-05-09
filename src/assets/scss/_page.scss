@@ -201,6 +201,23 @@ body{
   .ani-product {
     display: inline-block;
     opacity: 0;
+    transition-property:opacity;
+    transition-duration:2s;
+    &.active{
+      opacity: 1;
+    }
+    @include animation(lefttoright 2s linear infinite);
+    @include keyframes(lefttoright){
+      0%{
+        @include transform(rotate(0deg));
+      }
+      50%{
+        @include transform(rotate(10deg));
+      }
+      100%{
+        @include transform(rotate(0deg));
+      }
+    }
   }
 }
 

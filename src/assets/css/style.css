@@ -518,47 +518,47 @@ p {
 }
 
 .delay1 {
-  animation-delay: 1500ms;
+  transition-delay: 1500ms;
 }
 
 .delay2 {
-  animation-delay: 3000ms;
+  transition-delay: 3000ms;
 }
 
 .delay3 {
-  animation-delay: 4500ms;
+  transition-delay: 4500ms;
 }
 
 .delay4 {
-  animation-delay: 6000ms;
+  transition-delay: 6000ms;
 }
 
 .delay5 {
-  animation-delay: 7500ms;
+  transition-delay: 7500ms;
 }
 
 .delay6 {
-  animation-delay: 9000ms;
+  transition-delay: 9000ms;
 }
 
 .delay7 {
-  animation-delay: 10500ms;
+  transition-delay: 10500ms;
 }
 
 .delay8 {
-  animation-delay: 12000ms;
+  transition-delay: 12000ms;
 }
 
 .delay9 {
-  animation-delay: 13500ms;
+  transition-delay: 13500ms;
 }
 
 .delay10 {
-  animation-delay: 15000ms;
+  transition-delay: 15000ms;
 }
 
 .delay11 {
-  animation-delay: 16500ms;
+  transition-delay: 16500ms;
 }
 
 @-webkit-keyframes fade {
@@ -1467,8 +1467,62 @@ body {
 #pin-product .ani-product {
   display: inline-block;
   opacity: 0;
+  transition-property: opacity;
+  transition-duration: 2s;
+  -webkit-animation: lefttoright 2s linear infinite;
+  -moz-animation: lefttoright 2s linear infinite;
+  animation: lefttoright 2s linear infinite;
 }
-
+#pin-product .ani-product.active {
+  opacity: 1;
+}
+@-webkit-keyframes lefttoright {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+@-moz-keyframes lefttoright {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  50% {
+    -moz-transform: rotate(10deg);
+  }
+  100% {
+    -moz-transform: rotate(0deg);
+  }
+}
+@-o-keyframes lefttoright {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  50% {
+    -o-transform: rotate(10deg);
+  }
+  100% {
+    -o-transform: rotate(0deg);
+  }
+}
+@keyframes lefttoright {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
 #pin-landing {
   min-height: 100vh;
 }

@@ -15,43 +15,43 @@ var tinypng = require('gulp-tinypng-compress');
 //Define the app path
 var path = {
     all:[
-        './template/*.html',
+        '*.html',
         './src/assets/css/*.css',
         './src/assets/js/*.js',
         './src/assets/js/lib/*.js'
     ],
-    template:['./template/*.html'],
+    template:['*.html'],
     css:['./src/assets/css/*.css'],
-    js:[
+    homeJs:[
         './src/assets/js/lib/zepto.min.js',
-        //'./src/assets/js/lib/pre-loader.js',
-        //'./src/assets/js/lib/reqAnimate.js',
-        //'./src/assets/js/rem.js',
-        //'./src/assets/js/common.js',
-        //'./src/assets/js/wxshare.js',
+        './src/assets/js/lib/pre-loader.js',
+        './src/assets/js/rem.js',
+        './src/assets/js/common.js',
         //'./src/assets/js/api.js',
-        //'./src/assets/js/home.js'
+        //'./src/assets/js/wxshare.js',
+        './src/assets/js/home.js',
     ],
-    newFollowJs:[
+    productlistJs:[
         './src/assets/js/lib/zepto.min.js',
         './src/assets/js/lib/pre-loader.js',
+        './src/assets/js/lib/swiper.min.js',
         './src/assets/js/rem.js',
-        './src/assets/js/region.js',
+        './src/assets/js/productjson.js',
         './src/assets/js/common.js',
-        './src/assets/js/api.js',
-        './src/assets/js/wxshare.js',
-        './src/assets/js/newfollow.js',
+        //'./src/assets/js/api.js',
+        //'./src/assets/js/wxshare.js',
+        './src/assets/js/productlist.js',
     ],
-    followedJs:[
+    productJs:[
         './src/assets/js/lib/zepto.min.js',
         './src/assets/js/lib/pre-loader.js',
-        './src/assets/js/lib/cookie.js',
+        './src/assets/js/lib/swiper.min.js',
         './src/assets/js/rem.js',
-        './src/assets/js/region.js',
+        './src/assets/js/productjson.js',
         './src/assets/js/common.js',
-        './src/assets/js/api.js',
-        './src/assets/js/wxshare.js',
-        './src/assets/js/followed.js',
+        //'./src/assets/js/api.js',
+        //'./src/assets/js/wxshare.js',
+        './src/assets/js/singleproduct.js',
     ],
     images:[
         './src/assets/*.{png,jpg,jpeg}',
@@ -99,19 +99,27 @@ gulp.task('audio',['clean'],function () {
 });
 
 // Concatenate & Minify
-gulp.task('scripts_newfollow',['clean'], function() {
-    return gulp.src(path.newFollowJs)
-        .pipe(concat('all_newfollow.js'))
+gulp.task('scripts_home',['clean'], function() {
+    return gulp.src(path.homeJs)
+        .pipe(concat('all_home.js'))
         .pipe(gulp.dest('./src/dist'))
-        .pipe(rename('all_newfollow.min.js'))
+        .pipe(rename('all_home.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./src/dist/js'));
 });
-gulp.task('scripts_followed',['clean'], function() {
-    return gulp.src(path.followedJs)
-        .pipe(concat('all_followed.js'))
+gulp.task('scripts_productlist',['clean'], function() {
+    return gulp.src(path.productlistJs)
+        .pipe(concat('all_productlist.js'))
         .pipe(gulp.dest('./src/dist'))
-        .pipe(rename('all_followed.min.js'))
+        .pipe(rename('all_productlist.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./src/dist/js'));
+});
+gulp.task('scripts_product',['clean'], function() {
+    return gulp.src(path.productJs)
+        .pipe(concat('all_product.js'))
+        .pipe(gulp.dest('./src/dist'))
+        .pipe(rename('all_product.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./src/dist/js'));
 });
@@ -133,11 +141,12 @@ gulp.task("tinypng", function(){
 gulp.task('watch', ['clean'],function() {
     gulp.watch(path.css,['css']);
     gulp.watch(path.audio,['audio']);
-    gulp.watch(path.newFollowJs,['scripts_newfollow']);
-    gulp.watch(path.followedJs,['scripts_followed']);
+    gulp.watch(path.homeJs,['scripts_home']);
+    gulp.watch(path.productlistJs,['scripts_productlist']);
+    gulp.watch(path.productJs,['scripts_product']);
 });
 
 // Default Task
-gulp.task('default', ['watch', 'css','scripts_newfollow','scripts_followed','audio','browser-sync']);
+gulp.task('default', ['watch', 'css','scripts_home','scripts_productlist','scripts_product','audio','browser-sync']);
 
 
