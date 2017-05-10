@@ -335,7 +335,7 @@ var productListJson = [
         id:'8',
         name:'压花ROCKET SHUTTLE装饰铬鞣皮革DINKIER手袋',
         price:'3,500',
-        buylink:'http://m.china.coach.com/product/10855_LHL4A/detail.htm?collection=socialshop1705',
+        buylink:'http://m.china.coach.com/product/10862_LHCHK/detail.htm?collection=socialshop1705',
         imgSrc:'/src/dist/images/product/p-9.png',
         slideProductImg:[
             '/src/dist/images/product/pd_0000s_0001_9.png',
