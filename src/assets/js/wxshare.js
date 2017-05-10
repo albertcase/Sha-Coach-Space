@@ -47,8 +47,8 @@ function weixinshare(obj,successCallBack){
 
 $(document).ready(function(){
     weixinshare({
-        title1: 'KENZO关注有礼 | 睡美人面膜免费申领 ',
-        des: '和“好肌友”一起领取睡美人悦肤礼赠吧！',
+        title1: '搭乘小火箭，入手唐嫣限量同款，和COACH一起漫游太空',
+        des: '抢先入手唐嫣限量同款，发现COACH全新Space限量版系列的无限可能',
         link: window.location.origin,
         img: window.location.origin+'/src/dist/images/share.jpg'
     },function(){
