@@ -297,7 +297,8 @@ var productListJson = [
         isShowTang:true,
         isSellOut:false,
         slideTangImg:[
-            '/src/dist/images/look-5.jpg'
+            '/src/dist/images/look-10.jpg',
+            '/src/dist/images/look-11.jpg'
         ],
     },
     {
