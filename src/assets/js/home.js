@@ -140,6 +140,16 @@
             $('.terms-pop').removeClass('show');
         });
 
+    //    scroll to next
+
+        //$('.wrapper').on('touchstart',function(e){
+        //    console.log(e);
+        //});
+        //$('.wrapper').on('touchstart',function(e){
+        //    console.log(e);
+        //});
+
+
     };
 
     //calculate all img size
@@ -179,6 +189,8 @@
         var showBtn = setTimeout(function(){
             $('.btn-golists').addClass('active fade');
             $('.air-plane').addClass('hide fadeoutnow');
+            $('.container').removeClass('active');
+            $('.container').css('height',$('.pin-product').height());
         },14000);
 
 
