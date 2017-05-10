@@ -52,10 +52,15 @@
             },
             onComplete: function(){
 
+                //forbidden touchmove
+                noBounce.init({
+                    animate: false
+                });
+
                 //need calculate first
-                if(location.hash.indexOf('#tang')>-1){
-                    $('.people img').attr('src','/src/dist/images/people-tang.png');
-                }
+                //if(location.hash.indexOf('#tang')>-1){
+                //    $('.people img').attr('src','/src/dist/images/people-tang.png');
+                //}
                 self.calculateImgSize();
                 $('.loading').remove();
                 var containerHeight = $('.container').height(),

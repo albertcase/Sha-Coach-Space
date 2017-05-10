@@ -1613,6 +1613,9 @@ body {
   left: -0.6rem;
   bottom: 2rem;
 }
+#pin-landing .ani-3 {
+  opacity: 0.6;
+}
 
 body.page-productlist .wrapper,
 body.page-product .wrapper {
