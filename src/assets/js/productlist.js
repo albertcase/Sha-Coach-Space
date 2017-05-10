@@ -91,7 +91,7 @@
                 '<img src="'+item.imgSrc+'" alt="coach"/>'+
                 '</div>'+
                 '<div class="p-name">'+item.name+'</div>'+
-                '<div class="p-price">'+item.price+'</div>'+
+                '<div class="p-price">RMB '+item.price+'</div>'+
                 '<div class="p-btn">'+
                 '<span class="btn btn-buy">'+
                 '<a href="'+item.buylink+'">立即选购</a>'+
