@@ -247,7 +247,7 @@ var productListJson = [
         buylink:'http://m.china.coach.com/product/10884_BPM8Y/detail.htm?collection=socialshop1705',
         imgSrc:'/src/dist/images/product/p-3.png',
         slideProductImg:[
-            '/src/dist/images/product/pd_0000s_0008_3.png',
+            '/src/dist/images/product/pd_0000s_0007_3.png',
         ],
         isShowTang:true,
         isSellOut:false,
@@ -262,7 +262,7 @@ var productListJson = [
         buylink:'http://m.china.coach.com/product/87582_WHT/detail.htm?collection=socialshop1705',
         imgSrc:'/src/dist/images/product/p-4.png',
         slideProductImg:[
-            '/src/dist/images/product/pd_0000s_0008_4.png',
+            '/src/dist/images/product/pd_0000s_0006_4.png'
         ],
         isShowTang:true,
         isSellOut:false,
@@ -277,7 +277,7 @@ var productListJson = [
         buylink:'http://m.china.coach.com/product/87566_BLK/detail.htm?collection=socialshop1705',
         imgSrc:'/src/dist/images/product/p-5.png',
         slideProductImg:[
-            '/src/dist/images/product/pd_0000s_0008_5.png',
+            '/src/dist/images/product/pd_0000s_0005_5.png',
         ],
         isShowTang:true,
         isSellOut:false,
@@ -292,7 +292,7 @@ var productListJson = [
         buylink:'http://m.china.coach.com/product/87500_NAV/detail.htm?collection=socialshop1705',
         imgSrc:'/src/dist/images/product/p-6.png',
         slideProductImg:[
-            '/src/dist/images/product/pd_0000s_0008_6.png',
+            '/src/dist/images/product/pd_0000s_0004_6.png',
         ],
         isShowTang:true,
         isSellOut:false,
@@ -307,7 +307,7 @@ var productListJson = [
         buylink:'http://m.china.coach.com/product/19403_LHCHK/detail.htm?collection=socialshop1705',
         imgSrc:'/src/dist/images/product/p-7.png',
         slideProductImg:[
-            '/src/dist/images/product/pd_0000s_0008_7.png',
+            '/src/dist/images/product/pd_0000s_0003_7.png',
         ],
         isShowTang:false,
         isSellOut:false,
@@ -322,7 +322,7 @@ var productListJson = [
         buylink:'http://m.china.coach.com/product/10855_LHL4A/detail.htm?collection=socialshop1705',
         imgSrc:'/src/dist/images/product/p-8.png',
         slideProductImg:[
-            '/src/dist/images/product/pd_0000s_0008_8.png',
+            '/src/dist/images/product/pd_0000s_0002_8.png',
         ],
         isShowTang:false,
         isSellOut:false,
@@ -337,7 +337,7 @@ var productListJson = [
         buylink:'http://m.china.coach.com/product/10855_LHL4A/detail.htm?collection=socialshop1705',
         imgSrc:'/src/dist/images/product/p-9.png',
         slideProductImg:[
-            '/src/dist/images/product/pd_0000s_0008_9.png',
+            '/src/dist/images/product/pd_0000s_0001_9.png',
         ],
         isShowTang:false,
         isSellOut:false,
@@ -352,7 +352,7 @@ var productListJson = [
         buylink:'http://m.china.coach.com/product/10632_BKLL0/detail.htm?collection=socialshop1705',
         imgSrc:'/src/dist/images/product/p-10.png',
         slideProductImg:[
-            '/src/dist/images/product/pd_0000s_0008_10.png',
+            '/src/dist/images/product/pd_0000s_0000_10.png',
         ],
         isShowTang:false,
         isSellOut:false,
