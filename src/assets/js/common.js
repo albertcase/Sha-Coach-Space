@@ -282,9 +282,10 @@ var noBounce = function() {
 	return module;
 }();
 
-noBounce.init({
-	animate: false
-});
+//noBounce.init({
+//	animate: false
+//});
+
 
 $(document).ready(function(){
 
