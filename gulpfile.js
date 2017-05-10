@@ -28,7 +28,7 @@ var path = {
         './src/assets/js/rem.js',
         './src/assets/js/common.js',
         //'./src/assets/js/api.js',
-        //'./src/assets/js/wxshare.js',
+        './src/assets/js/wxshare.js',
         './src/assets/js/home.js',
     ],
     productlistJs:[
@@ -39,7 +39,7 @@ var path = {
         './src/assets/js/productjson.js',
         './src/assets/js/common.js',
         //'./src/assets/js/api.js',
-        //'./src/assets/js/wxshare.js',
+        './src/assets/js/wxshare.js',
         './src/assets/js/productlist.js',
     ],
     productJs:[
@@ -50,7 +50,7 @@ var path = {
         './src/assets/js/productjson.js',
         './src/assets/js/common.js',
         //'./src/assets/js/api.js',
-        //'./src/assets/js/wxshare.js',
+        './src/assets/js/wxshare.js',
         './src/assets/js/singleproduct.js',
     ],
     images:[

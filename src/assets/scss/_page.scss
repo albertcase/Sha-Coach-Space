@@ -417,6 +417,11 @@ body.page-product{
       min-height: 0.8rem;
     }
     .p-btn{
+      width: 1.8rem;
+      margin: 0 auto;
+      .btn{
+        padding: 0;
+      }
       a{
         display: block;
         color: #000;

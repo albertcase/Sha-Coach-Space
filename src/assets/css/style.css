@@ -1742,6 +1742,13 @@ body.page-product .wrapper {
 #product-list-wrap .product-list .p-name {
   min-height: 0.8rem;
 }
+#product-list-wrap .product-list .p-btn {
+  width: 1.8rem;
+  margin: 0 auto;
+}
+#product-list-wrap .product-list .p-btn .btn {
+  padding: 0;
+}
 #product-list-wrap .product-list .p-btn a {
   display: block;
   color: #000;

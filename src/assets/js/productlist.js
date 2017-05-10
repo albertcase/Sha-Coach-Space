@@ -115,16 +115,20 @@
             listHtml = listHtml +'<div class="swiper-slide"><img src="'+item+'"></div>';
         });
         $('#tang-popup .swiper-wrapper').html(listHtml);
-        var mySwiper = new Swiper ('#product-list-swiper', {
-            // Optional parameters
-            loop: true,
+        if(productListJson[id].slideTangImg.length>1){
+            var mySwiper = new Swiper ('#product-list-swiper', {
+                // Optional parameters
+                loop: true,
 
-            // Navigation arrows
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-        });
+                // Navigation arrows
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+            });
+            $('.swiper-button-next').removeClass('hide');
+            $('.swiper-button-prev').removeClass('hide');
+        }
+
     //    change the buy button link
-        console.log(productListJson[id].buylink);
         $('#tang-popup .btn-buy a').attr('href',productListJson[id].buylink);
 
     };
