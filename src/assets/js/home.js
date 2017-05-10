@@ -42,7 +42,19 @@
             baseurl + 'ani-3.png',
             baseurl + 'bg.jpg',
             baseurl + 'icon-music.png',
-            baseurl + 'people.png'
+            baseurl + 'home-product_03.png',
+            baseurl + 'home-product_04.png',
+            baseurl + 'home-product_05.png',
+            baseurl + 'home-product_06.png',
+            baseurl + 'home-product_07.png',
+            baseurl + 'home-product_09.png',
+            baseurl + 'home-product_10.png',
+            baseurl + 'home-product_12.png',
+            baseurl + 'home-product_13.png',
+            baseurl + 'hp-icon-2.png',
+            baseurl + 'people-tang.png',
+            baseurl + 'star-1.png',
+            baseurl + 'star-2.png',
         ];
 
         var i = 0,j= 0;
@@ -152,7 +164,7 @@
             curWindowHeight = $(window).height(),
             curPosY = containerHeight - curWindowHeight + 'px';
         var screenNum = parseInt(containerHeight / curWindowHeight);
-        var totalTime = 20,
+        var totalTime = 14,
             perTime = totalTime * 1000 / screenNum;
 
         var addClassForScreen_1 = setTimeout(function(){
@@ -160,14 +172,14 @@
             for(var z=0;z<$('#pin-product .animate').length+1;z++){
                 $('.ani-product-'+(10-z)).addClass('active delay'+z);
             };
-        },5000);
+        },2500);
 
         $('.bg').css('transform','translateY('+curPosY+')');
 
         var showBtn = setTimeout(function(){
             $('.btn-golists').addClass('active fade');
             $('.air-plane').addClass('hide fadeoutnow');
-        },20000);
+        },14000);
 
 
 

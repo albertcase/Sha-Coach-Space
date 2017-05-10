@@ -1387,10 +1387,10 @@ body {
 }
 
 .container.active {
-  -moz-transition: all 20s linear;
-  -o-transition: all 20s linear;
-  -webkit-transition: all 20s linear;
-  transition: all 20s linear;
+  -moz-transition: all 14s linear;
+  -o-transition: all 14s linear;
+  -webkit-transition: all 14s linear;
+  transition: all 14s linear;
 }
 .container .bg {
   position: absolute;
@@ -1402,10 +1402,10 @@ body {
   background-size: 100%;
 }
 .container .bg.active {
-  -moz-transition: all 26s linear;
-  -o-transition: all 26s linear;
-  -webkit-transition: all 26s linear;
-  transition: all 26s linear;
+  -moz-transition: all 16s linear;
+  -o-transition: all 16s linear;
+  -webkit-transition: all 16s linear;
+  transition: all 16s linear;
 }
 
 /*============
@@ -1753,7 +1753,7 @@ body.page-product .wrapper {
   text-transform: uppercase;
 }
 #product-list-wrap .product-list .p-name {
-  min-height: 0.8rem;
+  height: 0.8rem;
 }
 #product-list-wrap .product-list .p-btn {
   width: 1.8rem;

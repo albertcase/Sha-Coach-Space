@@ -126,7 +126,7 @@ body{
 .container{
   //transform: translateY(0);
   &.active{
-    @include transition(all 20s linear);
+    @include transition(all 14s linear);
     //@include transform(translateY(0px));
   }
   .bg{
@@ -138,7 +138,7 @@ body{
     background: url("../images/bg.jpg") repeat-y;
     background-size: 100%;
     &.active{
-      @include transition(all 26s linear);
+      @include transition(all 16s linear);
     }
   }
 }
@@ -422,7 +422,7 @@ body.page-product{
       text-transform: uppercase;
     }
     .p-name{
-      min-height: 0.8rem;
+      height: 0.8rem;
     }
     .p-btn{
       width: 1.8rem;
