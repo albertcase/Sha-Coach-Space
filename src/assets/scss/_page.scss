@@ -199,14 +199,15 @@ body{
   min-height: 100vh;
   text-align: center;
   .ani-product {
-    display: inline-block;
-    opacity: 0;
+    float: left;
+    //display: inline-block;
+    //opacity: 0;
     transition-property:opacity;
     transition-duration:2s;
     &.active{
       opacity: 1;
     }
-    @include animation(lefttoright 2s linear infinite);
+    //@include animation(lefttoright 2s linear infinite);
     @include keyframes(lefttoright){
       0%{
         @include transform(rotate(0deg));
@@ -218,6 +219,17 @@ body{
         @include transform(rotate(0deg));
       }
     }
+  }
+  .ani-product-5{
+    clear: both;
+    float: none;
+  }
+  .ani-product-8{
+    clear: both;
+    float: right;
+  }
+  .ani-product-9{
+    clear: both;
   }
 }
 

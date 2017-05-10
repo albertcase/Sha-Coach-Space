@@ -70,7 +70,7 @@
                     curWindowHeight = $(window).height(),
                     curPosY = curWindowHeight - containerHeight;
 
-                //$('.container').css('transform','translateY('+curPosY+'px)');
+                $('.container').css('transform','translateY('+curPosY+'px)');
                 self.bindEvent();
 
 

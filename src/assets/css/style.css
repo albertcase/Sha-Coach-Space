@@ -1465,13 +1465,9 @@ body {
   text-align: center;
 }
 #pin-product .ani-product {
-  display: inline-block;
-  opacity: 0;
+  float: left;
   transition-property: opacity;
   transition-duration: 2s;
-  -webkit-animation: lefttoright 2s linear infinite;
-  -moz-animation: lefttoright 2s linear infinite;
-  animation: lefttoright 2s linear infinite;
 }
 #pin-product .ani-product.active {
   opacity: 1;
@@ -1523,6 +1519,18 @@ body {
     transform: rotate(0deg);
   }
 }
+#pin-product .ani-product-5 {
+  clear: both;
+  float: none;
+}
+#pin-product .ani-product-8 {
+  clear: both;
+  float: right;
+}
+#pin-product .ani-product-9 {
+  clear: both;
+}
+
 #pin-landing {
   min-height: 100vh;
 }
