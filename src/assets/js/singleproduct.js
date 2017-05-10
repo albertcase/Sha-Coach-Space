@@ -45,18 +45,15 @@
             },
             onComplete: function(){
 
-                //need calculate first
-                //self.calculateImgSize();
-
-                //var containerHeight = $('.container').height(),
-                //    curWindowHeight = $(window).height(),
-                //curPosY = curWindowHeight - containerHeight;
+                //forbidden touchmove
+                noBounce.init({
+                    animate: false
+                });
 
                 //$('.container').css('transform','translateY('+curPosY+'px)');
                 var curPid = parseInt(Common.getParameterByName('id'));
                 //limit the product id
                 curPid = (curPid>-1 && curPid<11)?curPid:0;
-                console.log(curPid);
                 self.showProduct(curPid);
                 self.bindEvent();
                 //
@@ -71,31 +68,7 @@
     controller.prototype.bindEvent = function(){
         var self = this;
 
-
     };
-
-    //show all product lists
-    //controller.prototype.showProduct = function(id){
-    //
-    //    var allItemHtml = '';
-    //    productListJson.forEach(function(item,index){
-    //        allItemHtml = allItemHtml + '<li class="item item-'+index+'">'+
-    //            '<div class="p-img">'+
-    //            '<img src="'+item.imgSrc+'" alt="coach"/>'+
-    //            '</div>'+
-    //            '<div class="p-name">'+item.name+'</div>'+
-    //            '<div class="p-price">'+item.price+'</div>'+
-    //            '<div class="p-btn">'+
-    //            '<span class="btn btn-buy">'+
-    //            '<a href="'+item.buylink+'">立即选购</a>'+
-    //            '</span>'+
-    //            '<span class="btn btn-tang" data-id="'+item.id+'"style="display:'+(item.isShowTang?"block":"none")+'">唐嫣同款搭配</span>'+
-    //            '</div>'+
-    //            '</li>'
-    //    });
-    //    $('.product-list').html(allItemHtml);
-    //
-    //};
 
     //tang pop swiper effect
     controller.prototype.showProduct = function(id){
@@ -108,14 +81,19 @@
             itemHtml = itemHtml +'<div class="swiper-slide"><img src="'+item+'"></div>';
         });
         $('#product-swiper .swiper-wrapper').html(itemHtml);
-        var mySwiper = new Swiper ('#product-swiper', {
-            // Optional parameters
-            loop: true,
+        if(productListJson[id].slideProductImg.length>1){
+            var mySwiper = new Swiper ('#product-swiper', {
+                // Optional parameters
+                loop: true,
 
-            // Navigation arrows
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-        });
+                // Navigation arrows
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+            });
+            $('.swiper-button-next').removeClass('hide');
+            $('.swiper-button-prev').removeClass('hide');
+        }
+
         //update name
         $('#product-wrap .p-name').html(productListJson[id].name);
         //update price
@@ -143,20 +121,12 @@
         };
     };
 
-    //controller.prototype.startUp = function(){
-    //    var self = this;
-    //    $('.preload').remove();
-    //    $('.wrapper').addClass('fade');
-    //    //console.log(self.hasShared);
-    //    self.bindEvent();
-    //};
-
 
 
     $(document).ready(function(){
 //    show form
-        var newFollow = new controller();
-        newFollow.init();
+        var singleProduct = new controller();
+        singleProduct.init();
 
     });
 

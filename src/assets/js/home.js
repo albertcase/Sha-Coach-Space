@@ -8,7 +8,6 @@
     //init
     controller.prototype.init = function(){
         var self = this;
-
         var timeStart = 0,
             step= 5,
             isTrueNext = false,
@@ -28,6 +27,11 @@
         //    $('.loading-num .num').html(timeStart);
         //    timeStart += step;
         //},200);
+
+        //$('.people img').on('load',function(){
+        //    alert('123');
+        //    document.getElementById('bgm').play();
+        //});
 
         var baseurl = ''+'/src/dist/images/';
         var imagesArray = [
@@ -81,14 +85,21 @@
     controller.prototype.bindEvent = function(){
         console.log(2);
         var self = this;
-
         $('.air-plane').on('touchstart',function(){
             self.doFlyAniStart();
         });
 
-    //    play audio
+
+
+        //    play audio
         var audioEle = document.getElementById('bgm');
+    //    var audioEle = new Audio('/src/dist/audio/intro.m4a');
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            document.getElementById('bgm').play();
+        }, false);
         audioEle.load();
+        audioEle.play();
+
         //audioEle.play();
         $('#bgm').on('play',function(){
             $('.icon-bgm').addClass('play');
