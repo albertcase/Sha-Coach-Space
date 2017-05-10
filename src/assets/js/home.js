@@ -32,17 +32,6 @@
         var baseurl = ''+'/src/dist/images/';
         var imagesArray = [
             baseurl + 'logo.png',
-            baseurl + 'product-1.png',
-            baseurl + 'product-2.png',
-            baseurl + 'product-3.png',
-            baseurl + 'product-4.png',
-            baseurl + 'product-5.png',
-            baseurl + 'product-6.png',
-            baseurl + 'product-7.png',
-            baseurl + 'product-8.png',
-            baseurl + 'product-9.png',
-            baseurl + 'product-10.png',
-            baseurl + 'product-11.png',
             baseurl + 'air-plane.png',
             baseurl + 'ani-1.png',
             baseurl + 'ani-2.png',
@@ -65,12 +54,13 @@
 
                 //need calculate first
                 self.calculateImgSize();
-
+                $('.loading').remove();
                 var containerHeight = $('.container').height(),
                     curWindowHeight = $(window).height(),
                     curPosY = curWindowHeight - containerHeight;
 
                 $('.container').css('transform','translateY('+curPosY+'px)');
+                $('.wrapper').addClass('fade');
                 self.bindEvent();
 
 
@@ -159,8 +149,7 @@
 
     controller.prototype.startUp = function(){
         var self = this;
-        $('.preload').remove();
-        $('.wrapper').addClass('fade');
+
         //console.log(self.hasShared);
         self.bindEvent();
     };
