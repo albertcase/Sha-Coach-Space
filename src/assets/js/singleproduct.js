@@ -45,11 +45,6 @@
             },
             onComplete: function(){
 
-                //forbidden touchmove
-                noBounce.init({
-                    animate: false
-                });
-
                 //$('.container').css('transform','translateY('+curPosY+'px)');
                 var curPid = parseInt(Common.getParameterByName('id'));
                 //limit the product id
@@ -127,6 +122,14 @@
 //    show form
         var singleProduct = new controller();
         singleProduct.init();
+
+        document.body.addEventListener('touchmove', function(evt) {
+            //In this case, the default behavior is scrolling the body, which
+            //would result in an overflow.  Since we don't want that, we preventDefault.
+            if(!evt._isScroller) {
+                evt.preventDefault();
+            }
+        });
 
     });
 

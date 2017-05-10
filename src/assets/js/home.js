@@ -57,9 +57,9 @@
             onComplete: function(){
 
                 //forbidden touchmove
-                noBounce.init({
-                    animate: false
-                });
+                //noBounce.init({
+                //    animate: false
+                //});
 
                 //need calculate first
                 //if(location.hash.indexOf('#tang')>-1){
@@ -174,19 +174,21 @@
 
     };
 
-    controller.prototype.startUp = function(){
-        var self = this;
-
-        //console.log(self.hasShared);
-        self.bindEvent();
-    };
-
 
 
     $(document).ready(function(){
 //    show form
         var newFollow = new controller();
         newFollow.init();
+
+        document.body.addEventListener('touchmove', function(evt) {
+            //In this case, the default behavior is scrolling the body, which
+            //would result in an overflow.  Since we don't want that, we preventDefault.
+            if(!evt._isScroller) {
+                evt.preventDefault();
+            }
+        });
+        Common.overscroll(document.querySelector('.terms-pop .pcontent'));
 
     });
 
