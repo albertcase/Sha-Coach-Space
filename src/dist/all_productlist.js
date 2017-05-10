@@ -799,7 +799,6 @@ $(document).ready(function(){
             console.log(1);
             var curId = $(this).attr('data-id');
             self.showTangPop(curId);
-            //$('body').append('<div class="popup show">dkdkkdk</div>');
         });
 
         //close the tang-popup
@@ -847,7 +846,7 @@ $(document).ready(function(){
         if(productListJson[id].slideTangImg.length>1){
             var mySwiper = new Swiper ('#product-list-swiper', {
                 // Optional parameters
-                loop: true,
+                loop: false,
 
                 // Navigation arrows
                 nextButton: '.swiper-button-next',

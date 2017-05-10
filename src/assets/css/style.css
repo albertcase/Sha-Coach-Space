@@ -1657,17 +1657,30 @@ body {
   opacity: 0.6;
 }
 
-body.page-productlist .wrapper,
 body.page-product .wrapper {
   height: auto;
   overflow: visible;
   background: url("../images/bg.jpg") repeat-y;
   background-size: 100%;
-  background-attachment: fixed;
+}
+
+.product-list-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: url("../images/bg.jpg") no-repeat;
+  background-size: cover;
 }
 
 #product-list-wrap {
+  position: absolute;
+  z-index: 2;
   max-width: 100%;
+  height: auto;
   overflow: hidden;
 }
 #product-list-wrap .star-1 {
@@ -1825,8 +1838,6 @@ body.page-product .wrapper {
   transform: rotate(50deg);
   width: 1.5rem;
   height: 1.5rem;
-  background: url("../images/product-2.png") no-repeat;
-  background-size: 100%;
 }
 #tang-popup .btn-buy {
   width: 2.5rem;

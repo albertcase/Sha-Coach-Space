@@ -319,19 +319,27 @@ body{
 
 
 //for productlist page
-body.page-productlist,
 body.page-product{
   .wrapper{
     height: auto;
     overflow: visible;
     background: url("../images/bg.jpg") repeat-y;
     background-size: 100%;
-    background-attachment: fixed;
   }
 }
+.product-list-bg{
+  @include fullabsolute(0,0,100%,100%,1);
+  position: fixed;
+  background: url("../images/bg.jpg") no-repeat;
+  background-size: cover;
+}
 #product-list-wrap{
+  position: absolute;
+  z-index: 2;
   max-width: 100%;
+  height: auto;
   overflow: hidden;
+
   //&:before{
   //  content: '';
   //  display: block;
@@ -486,8 +494,6 @@ body.page-product{
     z-index: 2;
     @include transform(rotate(50deg));
     @include size(1.5rem,1.5rem);
-    background: url("../images/product-2.png") no-repeat;
-    background-size: 100%;
   }
   .btn-buy{
     @include size(2.5rem,0.56rem);
