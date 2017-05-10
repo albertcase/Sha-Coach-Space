@@ -1589,6 +1589,17 @@ body {
   clear: both;
 }
 
+.icon-bgm {
+  position: fixed;
+  right: 0.2rem;
+  top: 0.2rem;
+  z-index: 2;
+  width: 0.57rem;
+  height: 0.57rem;
+  background: url("../images/icon-music.png") no-repeat;
+  background-size: 100%;
+}
+
 #pin-landing {
   min-height: 100vh;
 }
@@ -1623,16 +1634,6 @@ body {
 #pin-landing .tip-wrap .terms-link {
   font-size: 0.24rem;
   text-decoration: underline;
-}
-#pin-landing .icon-bgm {
-  position: fixed;
-  right: 0.2rem;
-  top: 0.2rem;
-  z-index: 2;
-  width: 0.57rem;
-  height: 0.57rem;
-  background: url("../images/icon-music.png") no-repeat;
-  background-size: 100%;
 }
 #pin-landing .ani {
   z-index: 1;
