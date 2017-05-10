@@ -1464,13 +1464,30 @@ body {
   min-height: 100vh;
   text-align: center;
 }
-#pin-product .ani-product {
-  float: left;
+#pin-product .logo {
+  margin-bottom: 0.6rem;
+}
+#pin-product .star {
+  position: absolute;
+  left: -0.8rem;
+  top: -0.8rem;
+  z-index: 1;
+  width: 2.7rem;
+  height: 2.7rem;
+}
+#pin-product .animate {
+  opacity: 0;
   transition-property: opacity;
   transition-duration: 2s;
 }
-#pin-product .ani-product.active {
+#pin-product .animate.active {
   opacity: 1;
+}
+#pin-product .ani-product {
+  float: left;
+  -webkit-animation: lefttoright 2s linear infinite;
+  -moz-animation: lefttoright 2s linear infinite;
+  animation: lefttoright 2s linear infinite;
 }
 @-webkit-keyframes lefttoright {
   0% {
@@ -1524,10 +1541,16 @@ body {
   float: none;
 }
 #pin-product .ani-product-8 {
+  position: absolute;
+  bottom: 2.5rem;
+  right: 1rem;
+}
+#pin-product .ani-product-9 {
+  position: relative;
   clear: both;
   float: right;
 }
-#pin-product .ani-product-9 {
+#pin-product .ani-product-10 {
   clear: both;
 }
 

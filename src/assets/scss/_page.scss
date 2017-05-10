@@ -198,16 +198,24 @@ body{
 #pin-product{
   min-height: 100vh;
   text-align: center;
-  .ani-product {
-    float: left;
-    //display: inline-block;
-    //opacity: 0;
+  .logo{
+    margin-bottom: 0.6rem;
+  }
+  .star{
+    @include fullabsolute(-0.8rem,-0.8rem,2.7rem,2.7rem,1);
+  }
+  .animate{
+    opacity: 0;
     transition-property:opacity;
     transition-duration:2s;
     &.active{
       opacity: 1;
     }
-    //@include animation(lefttoright 2s linear infinite);
+  }
+  .ani-product {
+    float: left;
+    //display: inline-block;
+    @include animation(lefttoright 2s linear infinite);
     @include keyframes(lefttoright){
       0%{
         @include transform(rotate(0deg));
@@ -225,10 +233,16 @@ body{
     float: none;
   }
   .ani-product-8{
+    position: absolute;
+    bottom: 2.5rem;
+    right: 1rem;
+  }
+  .ani-product-9{
+    position: relative;
     clear: both;
     float: right;
   }
-  .ani-product-9{
+  .ani-product-10{
     clear: both;
   }
 }
