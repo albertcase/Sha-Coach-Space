@@ -101,6 +101,15 @@
             }
         });
 
+    //    show terms pop
+        $('.terms-link').on('touchstart',function(){
+            $('.terms-pop').addClass('show');
+        });
+    //    close the terms pop
+        $('.terms-pop .btn-close').on('touchstart',function(){
+            $('.terms-pop').removeClass('show');
+        });
+
     };
 
     //calculate all img size

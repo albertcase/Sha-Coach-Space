@@ -178,15 +178,22 @@ body{
   left: 50%;
   @include transform(translateX(-50%));
   z-index: -1;
+  text-align: center;
+  &.active{
+    //opacity: 1;
+    z-index: $z-index-6;
+  }
   a{
     display: block;
     color: #000;
     text-decoration: none;
     padding: 0.04rem 0.4rem;
+    background: #fff;
   }
-  &.active{
-    //opacity: 1;
-    z-index: $z-index-6;
+  .terms-link{
+    font-size: 0.22rem;
+    color: #fff;
+    text-decoration: underline;
   }
 }
 
