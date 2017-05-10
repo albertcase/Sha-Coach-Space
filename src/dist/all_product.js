@@ -235,7 +235,7 @@ var productListJson = [
             '/src/dist/images/product/pd_0000s_0008_2.png',
         ],
         isShowTang:true,
-        isSellOut:false,
+        isSellOut:true,
         slideTangImg:[
             '/src/dist/images/look-1.jpg'
         ],
@@ -787,10 +787,16 @@ $(document).ready(function(){
         //update name
         $('#product-wrap .p-name').html(productListJson[id].name);
         //update price
-        $('#product-wrap .p-price').html(productListJson[id].price);
+        $('#product-wrap .p-price').html('RMB '+productListJson[id].price);
 
         //    change the buy button link
-        $('#product-wrap .btn-buy a').attr('href',productListJson[id].buylink);
+        if(productListJson[id].isSellOut){
+        //    sell out
+            $('#product-wrap .btn-buy a').html('已售罄');
+        }else{
+            $('#product-wrap .btn-buy a').attr('href',productListJson[id].buylink);
+        }
+
 
     };
 

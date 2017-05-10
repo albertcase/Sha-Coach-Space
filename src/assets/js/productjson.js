@@ -24,7 +24,7 @@ var productListJson = [
             '/src/dist/images/product/pd_0000s_0008_2.png',
         ],
         isShowTang:true,
-        isSellOut:false,
+        isSellOut:true,
         slideTangImg:[
             '/src/dist/images/look-1.jpg'
         ],

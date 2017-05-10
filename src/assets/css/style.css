@@ -1828,6 +1828,7 @@ body.page-product .wrapper {
 }
 #product-wrap #product-swiper-wrap {
   position: relative;
+  margin-top: 0.8rem;
 }
 #product-wrap #product-swiper-wrap .swiper-button-prev {
   left: 0.3rem;
