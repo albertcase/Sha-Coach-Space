@@ -53,6 +53,9 @@
             onComplete: function(){
 
                 //need calculate first
+                if(location.hash.indexOf('#tang')>-1){
+                    $('.people img').attr('src','/src/dist/images/people-tang.png');
+                }
                 self.calculateImgSize();
                 $('.loading').remove();
                 var containerHeight = $('.container').height(),
@@ -62,7 +65,6 @@
                 $('.container').css('transform','translateY('+curPosY+'px)');
                 $('.wrapper').addClass('fade');
                 self.bindEvent();
-
 
             }
         });
