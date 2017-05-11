@@ -785,7 +785,6 @@ $(document).ready(function(){
 
         var i = 0,j= 0;
         imagesArray = imagesArray.concat(audioSrc);
-        console.log(imagesArray);
         new preLoader(imagesArray, {
             onProgress: function(){
                 i++;
