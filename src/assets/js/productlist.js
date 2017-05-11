@@ -77,6 +77,36 @@
             //clear the item
             $('#tang-popup .swiper-wrapper').html('');
         });
+
+
+        //    play audio
+        var audioEle = document.getElementById('bgm');
+        //var audioEle = new Audio('/src/dist/audio/intro.mp3');
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            audioEle.play();
+        }, false);
+        audioEle.load();
+        audioEle.play();
+
+        var playTimeEnd = 0;
+        //audioEle.play();
+        $('#bgm').on('play',function(){
+            $('.icon-bgm').addClass('play');
+        });
+        $('#bgm').on('pause',function(){
+            $('.icon-bgm').removeClass('play');
+        });
+        var isPlaying = false;
+        $('.icon-bgm').on('touchstart',function(){
+            //$(this).toggleClass('play');
+            if(isPlaying){
+                audioEle.pause();
+                isPlaying=false;
+            }else{
+                audioEle.play();
+                isPlaying=true;
+            }
+        });
     };
 
     //show all product lists
