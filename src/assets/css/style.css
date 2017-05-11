@@ -1856,6 +1856,7 @@ body.page-product .wrapper {
   min-height: 5rem;
 }
 #tang-popup .icon-1 {
+  display: none;
   position: absolute;
   top: 0.4rem;
   right: 0.2rem;
