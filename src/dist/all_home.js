@@ -852,16 +852,10 @@ $(document).ready(function(){
             $('.icon-bgm').removeClass('play');
         });
         $('#bgm').on('ended',function(){
-            playTimeEnd++;
-            if(playTimeEnd==1){
-                audioEle.src = '/src/dist/audio/tang.m4a';
-                audioEle.load();
-                audioEle.play();
-            }else{
-                audioEle.src = '/src/dist/audio/intro.mp3';
-                audioEle.load();
-                audioEle.play();
-            }
+            //playTimeEnd++;
+            audioEle.src = '/src/dist/audio/intro.mp3';
+            audioEle.load();
+            audioEle.play();
 
         });
         var isPlaying = false;
