@@ -63,6 +63,12 @@
     controller.prototype.bindEvent = function(){
         var self = this;
 
+    //    click back button, back to home page,
+    //    set a cookie named "fromproduct" to true, if it true, the homepage display from top position
+        $('#product-wrap .btn-back').on('touchstart', function(){
+            Cookies.set('fromproduct', 1);
+        });
+
     };
 
     //tang pop swiper effect

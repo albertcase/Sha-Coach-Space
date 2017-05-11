@@ -25,6 +25,7 @@ var path = {
     homeJs:[
         './src/assets/js/lib/zepto.min.js',
         './src/assets/js/lib/pre-loader.js',
+        './src/assets/js/lib/cookie.js',
         './src/assets/js/rem.js',
         './src/assets/js/common.js',
         //'./src/assets/js/api.js',
@@ -46,6 +47,7 @@ var path = {
         './src/assets/js/lib/zepto.min.js',
         './src/assets/js/lib/pre-loader.js',
         './src/assets/js/lib/swiper.min.js',
+        './src/assets/js/lib/cookie.js',
         './src/assets/js/rem.js',
         './src/assets/js/productjson.js',
         './src/assets/js/common.js',

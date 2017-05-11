@@ -83,7 +83,16 @@
                     curWindowHeight = $(window).height(),
                     curPosY = curWindowHeight - containerHeight;
 
-                $('.container').css('transform','translateY('+curPosY+'px)');
+                if(Cookies.get('fromproduct')==1){
+                    $('.container').css('transform','translateY(0px)').addClass('godown');
+                    $('#pin-product .animate').addClass('active');
+                    $('.air-plane').addClass('flyout');
+                    self.enableScroll = true;
+                    Cookies.set('fromproduct',0);
+                }else{
+                    $('.container').css('transform','translateY('+curPosY+'px)');
+                }
+
                 $('.wrapper').addClass('fade');
                 self.bindEvent();
 
