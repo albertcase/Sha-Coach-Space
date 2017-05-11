@@ -217,6 +217,11 @@ body{
 #pin-product{
   min-height: 100vh;
   text-align: center;
+  &.scrollnow{
+    min-height: auto;
+    height: 100vh;
+    overflow-y: auto;
+  }
   .logo{
     margin-bottom: 0.6rem;
   }

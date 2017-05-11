@@ -808,10 +808,11 @@ $(document).ready(function(){
                 //test
                 //Cookies.set('fromproduct',1);
                 if(Cookies.get('fromproduct')==1){
-                    $('.container').css('transform','translateY(0px)').addClass('godown');
+                    //$('.container').css('transform','translateY(0px)').addClass('godown');
                     $('#pin-product .animate').addClass('active');
                     $('.air-plane').addClass('hide');
                     $('.btn-golists').addClass('fade active');
+                    $('#pin-product').addClass('scrollnow');
                     self.enableScroll = true;
                     Cookies.set('fromproduct',0);
                 }else{
@@ -892,34 +893,35 @@ $(document).ready(function(){
             curPosY = 0,
             maxPosY = 0,
             minPosY =$(window).height() - $('#pin-product').height();
-        var containerELe = $('.container');
-        //$('.container').css('transform','translateY('+curPosY+'px)');
-            maxCurPosY = containerELe.height() - $(window).height();
-        //console.log(maxCurPosY);
-        containerELe.on('touchstart',function(e){
-            if(!self.enableScroll) return;
-            //console.log(e.changedTouches[0].clientY);
-            initY = e.changedTouches[0].clientY;
-        });
-        containerELe.on('touchmove',function(e){
-            if(!self.enableScroll) return;
-            //console.log(e.changedTouches[0].clientY);
-            curPosY = curPosY + (e.changedTouches[0].clientY - initY)/20;
-            if(curPosY>maxPosY){
-                curPosY = maxPosY;
-            }else if(curPosY < minPosY){
-                curPosY = minPosY;
-            }
-            $('.container').css('transform','translateY('+curPosY+'px)');
-
-            //console.log(e.changedTouches[0].clientY);
-
-        });
-        containerELe.on('touchend',function(e){
-            if(!self.enableScroll) return;
-            initY = 0;
-
-        });
+        //var containerELe = $('.container');
+        ////$('.container').css('transform','translateY('+curPosY+'px)');
+        //    maxCurPosY = containerELe.height() - $(window).height();
+        ////console.log(maxCurPosY);
+        //containerELe.on('touchstart',function(e){
+        //    if(!self.enableScroll) return;
+        //    //console.log(e.changedTouches[0].clientY);
+        //    initY = e.changedTouches[0].clientY;
+        //});
+        //containerELe.on('touchmove',function(e){
+        //    if(!self.enableScroll) return;
+        //    //console.log(e.changedTouches[0].clientY);
+        //    curPosY = curPosY + (e.changedTouches[0].clientY - initY)/20;
+        //    if(curPosY>maxPosY){
+        //        curPosY = maxPosY;
+        //    }else if(curPosY < minPosY){
+        //        curPosY = minPosY;
+        //    }
+        //    $('.container').css('transform','translateY('+curPosY+'px)');
+        //
+        //    //console.log(e.changedTouches[0].clientY);
+        //
+        //});
+        //containerELe.on('touchend',function(e){
+        //    if(!self.enableScroll) return;
+        //    initY = 0;
+        //
+        //});
+        Common.overscroll(document.getElementById('pin-product'));
 
 
     };
@@ -963,6 +965,7 @@ $(document).ready(function(){
             $('.air-plane').addClass('flyout');
             $('.container').removeClass('active').addClass('godown');
             $('.container').css('height',$('.pin-product').height());
+            $('#pin-product').addClass('scrollnow');
             self.enableScroll = true;
         },totalTime*1000);
 

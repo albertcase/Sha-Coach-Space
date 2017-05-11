@@ -1508,6 +1508,11 @@ body {
   min-height: 100vh;
   text-align: center;
 }
+#pin-product.scrollnow {
+  min-height: auto;
+  height: 100vh;
+  overflow-y: auto;
+}
 #pin-product .logo {
   margin-bottom: 0.6rem;
 }
