@@ -114,7 +114,8 @@
         curImgArray.forEach(function(item,index){
             listHtml = listHtml +'<div class="swiper-slide"><img src="'+item+'"></div>';
         });
-        console.log(listHtml);
+        //console.log(listHtml);
+        
         $('#tang-popup .swiper-wrapper').html(listHtml);
         if(productListJson[id].slideTangImg.length>1){
             var mySwiper = new Swiper ('#product-list-swiper', {
