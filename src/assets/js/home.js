@@ -84,13 +84,14 @@
                     curPosY = curWindowHeight - containerHeight;
 
                 //test
-                //Cookies.set('fromproduct',1);
+                Cookies.set('fromproduct',1);
                 if(Cookies.get('fromproduct')==1){
                     $('.container').css('transform','translateY(0px)').addClass('godown');
                     $('#pin-product .animate').addClass('active');
-                    $('.air-plane').addClass('flyout');
+                    $('.air-plane').addClass('hide');
+                    $('.btn-golists').addClass('fade active');
                     self.enableScroll = true;
-                    Cookies.set('fromproduct',0);
+                    //Cookies.set('fromproduct',0);
                 }else{
                     $('.container').css('transform','translateY('+curPosY+'px)');
                 }
@@ -144,7 +145,7 @@
             $('.terms-pop').addClass('show');
         });
     //    close the terms pop
-        $('.terms-pop .btn-close').on('touchstart',function(){
+        $('.terms-pop .btn-close').on('click',function(){
             $('.terms-pop').removeClass('show');
         });
 

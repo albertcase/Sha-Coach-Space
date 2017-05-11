@@ -67,7 +67,6 @@
     controller.prototype.bindEvent = function(){
         var self = this;
         $('.btn-tang').on('touchstart',function(){
-            console.log(1);
             var curId = $(this).attr('data-id');
             self.showTangPop(curId);
         });
