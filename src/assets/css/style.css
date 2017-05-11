@@ -1386,11 +1386,25 @@ body {
   overflow: hidden;
 }
 
+.container {
+  transform: translateY(0);
+}
 .container.active {
-  -moz-transition: all 14s linear;
-  -o-transition: all 14s linear;
-  -webkit-transition: all 14s linear;
-  transition: all 14s linear;
+  -moz-transition: all 10s linear;
+  -o-transition: all 10s linear;
+  -webkit-transition: all 10s linear;
+  transition: all 10s linear;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+}
+.container.godown {
+  -moz-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
 }
 .container .bg {
   position: absolute;
@@ -1402,10 +1416,10 @@ body {
   background-size: 100%;
 }
 .container .bg.active {
-  -moz-transition: all 16s linear;
-  -o-transition: all 16s linear;
-  -webkit-transition: all 16s linear;
-  transition: all 16s linear;
+  -moz-transition: all 12s linear;
+  -o-transition: all 12s linear;
+  -webkit-transition: all 12s linear;
+  transition: all 12s linear;
 }
 
 /*============
@@ -1426,9 +1440,39 @@ body {
   left: 50%;
   margin-left: -0.68rem;
   z-index: 6;
+  -moz-transition: bottom 4s;
+  -o-transition: bottom 4s;
+  -webkit-transition: bottom 4s;
+  transition: bottom 4s;
+  -webkit-animation: upanddown 2s linear infinite;
+  -moz-animation: upanddown 2s linear infinite;
+  animation: upanddown 2s linear infinite;
 }
-.air-plane.fadeoutnow {
-  z-index: -1;
+@keyframes upanddown {
+  0% {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+.air-plane.flyout {
+  bottom: 110vh;
 }
 
 .btn-golists {

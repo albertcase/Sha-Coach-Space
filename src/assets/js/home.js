@@ -3,7 +3,7 @@
  * */
 ;(function(){
     var controller = function(){
-
+        this.enableScroll = false;
     };
     //init
     controller.prototype.init = function(){
@@ -95,13 +95,10 @@
 
     //Bind Event
     controller.prototype.bindEvent = function(){
-        console.log(2);
         var self = this;
         $('.air-plane').on('touchstart',function(){
             self.doFlyAniStart();
         });
-
-
 
         //    play audio
         var audioEle = document.getElementById('bgm');
@@ -149,6 +146,39 @@
         //    console.log(e);
         //});
 
+        var initY = 0,
+            curPosY = 0,
+            maxPosY = 0,
+            minPosY =$(window).height() - $('#pin-product').height();
+        var containerELe = $('.container');
+        //$('.container').css('transform','translateY('+curPosY+'px)');
+            maxCurPosY = containerELe.height() - $(window).height();
+        //console.log(maxCurPosY);
+        containerELe.on('touchstart',function(e){
+            if(!self.enableScroll) return;
+            //console.log(e.changedTouches[0].clientY);
+            initY = e.changedTouches[0].clientY;
+        });
+        containerELe.on('touchmove',function(e){
+            if(!self.enableScroll) return;
+            //console.log(e.changedTouches[0].clientY);
+            curPosY = curPosY + (e.changedTouches[0].clientY - initY)/20;
+            if(curPosY>maxPosY){
+                curPosY = maxPosY;
+            }else if(curPosY < minPosY){
+                curPosY = minPosY;
+            }
+            $('.container').css('transform','translateY('+curPosY+'px)');
+
+            //console.log(e.changedTouches[0].clientY);
+
+        });
+        containerELe.on('touchend',function(e){
+            if(!self.enableScroll) return;
+            initY = 0;
+
+        });
+
 
     };
 
@@ -174,7 +204,7 @@
             curWindowHeight = $(window).height(),
             curPosY = containerHeight - curWindowHeight + 'px';
         var screenNum = parseInt(containerHeight / curWindowHeight);
-        var totalTime = 14,
+        var totalTime = 10,
             perTime = totalTime * 1000 / screenNum;
 
         var addClassForScreen_1 = setTimeout(function(){
@@ -182,16 +212,17 @@
             for(var z=0;z<$('#pin-product .animate').length+1;z++){
                 $('.ani-product-'+(10-z)).addClass('active delay'+z);
             };
-        },2500);
+        },2000);
 
         $('.bg').css('transform','translateY('+curPosY+')');
 
         var showBtn = setTimeout(function(){
             $('.btn-golists').addClass('active fade');
-            $('.air-plane').addClass('hide fadeoutnow');
-            $('.container').removeClass('active');
+            $('.air-plane').addClass('flyout');
+            $('.container').removeClass('active').addClass('godown');
             $('.container').css('height',$('.pin-product').height());
-        },14000);
+            self.enableScroll = true;
+        },totalTime*1000);
 
 
 
@@ -213,6 +244,7 @@
             }
         });
         Common.overscroll(document.querySelector('.terms-pop .pcontent'));
+
 
     });
 

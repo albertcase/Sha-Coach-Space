@@ -124,10 +124,13 @@ body{
   overflow: hidden;
 }
 .container{
-  //transform: translateY(0);
+  transform: translateY(0);
   &.active{
-    @include transition(all 14s linear);
-    //@include transform(translateY(0px));
+    @include transition(all 10s linear);
+    @include transform(translateY(0px));
+  }
+  &.godown{
+    @include transition(all 1s linear);
   }
   .bg{
     position: absolute;
@@ -138,7 +141,7 @@ body{
     background: url("../images/bg.jpg") repeat-y;
     background-size: 100%;
     &.active{
-      @include transition(all 16s linear);
+      @include transition(all 12s linear);
     }
   }
 }
@@ -165,10 +168,23 @@ body{
   left: 50%;
   margin-left: -0.68rem;
   z-index: $z-index-6;
-  //@include transition(all 40s linear);
-  &.fadeoutnow{
+  @include transition(bottom 4s);
+  @include animation(upanddown 2s linear infinite);
+  @keyframes upanddown {
+    0%{
+      @include transform(translateY(0px));
+    }
+    50%{
+      @include transform(translateY(-10px));
+    }
+    100%{
+      @include transform(translateY(0px));
+    }
+  }
+  &.flyout{
     //opacity: 0;
-    z-index: -1;
+    //z-index: -1;
+    bottom: 110vh;
   }
 }
 .btn-golists{
