@@ -114,19 +114,33 @@
 
         //    play audio
         var audioEle = document.getElementById('bgm');
-    //    var audioEle = new Audio('/src/dist/audio/intro.m4a');
+        //var audioEle = new Audio('/src/dist/audio/intro.mp3');
         document.addEventListener("WeixinJSBridgeReady", function () {
-            document.getElementById('bgm').play();
+            audioEle.play();
         }, false);
         audioEle.load();
         audioEle.play();
 
+        var playTimeEnd = 0;
         //audioEle.play();
         $('#bgm').on('play',function(){
             $('.icon-bgm').addClass('play');
         });
         $('#bgm').on('pause',function(){
             $('.icon-bgm').removeClass('play');
+        });
+        $('#bgm').on('ended',function(){
+            playTimeEnd++;
+            if(playTimeEnd==1){
+                audioEle.src = '/src/dist/audio/tang.m4a';
+                audioEle.load();
+                audioEle.play();
+            }else{
+                audioEle.src = '/src/dist/audio/intro.mp3';
+                audioEle.load();
+                audioEle.play();
+            }
+
         });
         var isPlaying = false;
         $('.icon-bgm').on('touchstart',function(){
