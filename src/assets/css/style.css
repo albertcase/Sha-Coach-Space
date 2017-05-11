@@ -518,47 +518,47 @@ p {
 }
 
 .delay1 {
-  transition-delay: 1500ms;
+  transition-delay: 1000ms;
 }
 
 .delay2 {
-  transition-delay: 3000ms;
+  transition-delay: 2000ms;
 }
 
 .delay3 {
-  transition-delay: 4500ms;
+  transition-delay: 3000ms;
 }
 
 .delay4 {
-  transition-delay: 6000ms;
+  transition-delay: 4000ms;
 }
 
 .delay5 {
-  transition-delay: 7500ms;
+  transition-delay: 5000ms;
 }
 
 .delay6 {
-  transition-delay: 9000ms;
+  transition-delay: 6000ms;
 }
 
 .delay7 {
-  transition-delay: 10500ms;
+  transition-delay: 7000ms;
 }
 
 .delay8 {
-  transition-delay: 12000ms;
+  transition-delay: 8000ms;
 }
 
 .delay9 {
-  transition-delay: 13500ms;
+  transition-delay: 9000ms;
 }
 
 .delay10 {
-  transition-delay: 15000ms;
+  transition-delay: 10000ms;
 }
 
 .delay11 {
-  transition-delay: 16500ms;
+  transition-delay: 11000ms;
 }
 
 @-webkit-keyframes fade {

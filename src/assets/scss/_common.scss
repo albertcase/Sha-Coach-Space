@@ -443,7 +443,7 @@ p{
 //delay for product
 @for $i from 1 through 11 {
   .delay#{$i}{
-    transition-delay: 1500ms * $i;
+    transition-delay: 1000ms * $i;
   }
 }
 

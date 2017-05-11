@@ -212,7 +212,7 @@
             for(var z=0;z<$('#pin-product .animate').length+1;z++){
                 $('.ani-product-'+(10-z)).addClass('active delay'+z);
             };
-        },2000);
+        },1800);
 
         $('.bg').css('transform','translateY('+curPosY+')');
 
