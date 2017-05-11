@@ -237,7 +237,8 @@ var productListJson = [
         isShowTang:true,
         isSellOut:true,
         slideTangImg:[
-            '/src/dist/images/look-1.jpg'
+            '/src/dist/images/look-1.jpg',
+            '/src/dist/images/look-6.jpg'
         ],
     },
     {
@@ -835,6 +836,7 @@ $(document).ready(function(){
     //tang pop swiper effect
     controller.prototype.showTangPop = function(id){
         var self = this;
+        $('.swiper-wrapper').html('').attr('style','');
         $('#tang-popup').addClass('show');
 
         var listHtml = '';
@@ -842,6 +844,7 @@ $(document).ready(function(){
         curImgArray.forEach(function(item,index){
             listHtml = listHtml +'<div class="swiper-slide"><img src="'+item+'"></div>';
         });
+        console.log(listHtml);
         $('#tang-popup .swiper-wrapper').html(listHtml);
         if(productListJson[id].slideTangImg.length>1){
             var mySwiper = new Swiper ('#product-list-swiper', {
@@ -853,6 +856,9 @@ $(document).ready(function(){
             });
             $('.swiper-button-next').removeClass('hide');
             $('.swiper-button-prev').removeClass('hide');
+        }else{
+            $('.swiper-button-next').addClass('hide');
+            $('.swiper-button-prev').addClass('hide');
         }
 
     //    change the buy button link
