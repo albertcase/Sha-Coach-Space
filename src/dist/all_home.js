@@ -778,8 +778,14 @@ $(document).ready(function(){
             baseurl + 'star-1.png',
             baseurl + 'star-2.png',
         ];
+        var audioSrc = [
+                '/src/dist/audio/intro.mp3',
+                '/src/dist/audio/tang.m4a'
+            ];
 
         var i = 0,j= 0;
+        imagesArray = imagesArray.concat(audioSrc);
+        console.log(imagesArray);
         new preLoader(imagesArray, {
             onProgress: function(){
                 i++;
