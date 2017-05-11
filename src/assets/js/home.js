@@ -92,6 +92,7 @@
                     $('.btn-golists').addClass('fade active');
                     $('#pin-product').addClass('scrollnow');
                     self.enableScroll = true;
+                    document.getElementById('bgm').src = '/src/dist/audio/intro.mp3';
                     Cookies.set('fromproduct',0);
                 }else{
                     $('.container').css('transform','translateY('+curPosY+'px)');
