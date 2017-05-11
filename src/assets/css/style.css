@@ -1584,20 +1584,20 @@ body {
   clear: both;
   float: none;
 }
-#pin-product .ani-product-8 {
+#pin-product .ani-just {
   position: absolute;
   bottom: 2.5rem;
   right: 1rem;
 }
-#pin-product .ani-product-8.delay2 {
-  transition-delay: 1s;
-}
-#pin-product .ani-product-9 {
+#pin-product .ani-product-8 {
   position: relative;
   clear: both;
   float: right;
 }
-#pin-product .ani-product-10 {
+#pin-product .ani-product-8.active .ani-just {
+  opacity: 1;
+}
+#pin-product .ani-product-9 {
   clear: both;
 }
 
