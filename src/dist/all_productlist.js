@@ -836,18 +836,19 @@ $(document).ready(function(){
     //tang pop swiper effect
     controller.prototype.showTangPop = function(id){
         var self = this;
-        $('.swiper-wrapper').html('').attr('style','');
+        //$('.swiper-wrapper').html('').attr('style','');
         $('#tang-popup').addClass('show');
+        $('#tang-popup .item').addClass('hide');
 
         var listHtml = '';
         var curImgArray = productListJson[id].slideTangImg;
         curImgArray.forEach(function(item,index){
             listHtml = listHtml +'<div class="swiper-slide"><img src="'+item+'"></div>';
         });
-        //console.log(listHtml);
-        
-        $('#tang-popup .swiper-wrapper').html(listHtml);
+
+        //$('#tang-popup .swiper-wrapper').html(listHtml);
         if(productListJson[id].slideTangImg.length>1){
+            $('#tang-popup .item-multi').removeClass('hide');
             var mySwiper = new Swiper ('#product-list-swiper', {
                 // Optional parameters
                 loop: false,
@@ -855,11 +856,13 @@ $(document).ready(function(){
                 nextButton: '.swiper-button-next',
                 prevButton: '.swiper-button-prev',
             });
-            $('.swiper-button-next').removeClass('hide');
-            $('.swiper-button-prev').removeClass('hide');
+            mySwiper.removeAllSlides();
+            mySwiper.appendSlide(listHtml);
+            mySwiper.update();
         }else{
-            $('.swiper-button-next').addClass('hide');
-            $('.swiper-button-prev').addClass('hide');
+            $('#tang-popup .item-single').removeClass('hide');
+            //item-single
+            $('.item-single').html(listHtml);
         }
 
     //    change the buy button link
