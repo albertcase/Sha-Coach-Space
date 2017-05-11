@@ -805,6 +805,8 @@ $(document).ready(function(){
                     curWindowHeight = $(window).height(),
                     curPosY = curWindowHeight - containerHeight;
 
+                //test
+                //Cookies.set('fromproduct',1);
                 if(Cookies.get('fromproduct')==1){
                     $('.container').css('transform','translateY(0px)').addClass('godown');
                     $('#pin-product .animate').addClass('active');

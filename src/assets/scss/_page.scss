@@ -255,11 +255,20 @@ body{
     position: absolute;
     bottom: 2.5rem;
     right: 1rem;
+    &.delay2{
+      transition-delay: 1s;
+    }
   }
   .ani-product-9{
     position: relative;
     clear: both;
     float: right;
+    //&.active{
+    //  .ani-product-8{
+    //    opacity: 1;
+    //  }
+    //}
+
   }
   .ani-product-10{
     clear: both;

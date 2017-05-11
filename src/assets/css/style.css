@@ -1589,6 +1589,9 @@ body {
   bottom: 2.5rem;
   right: 1rem;
 }
+#pin-product .ani-product-8.delay2 {
+  transition-delay: 1s;
+}
 #pin-product .ani-product-9 {
   position: relative;
   clear: both;
