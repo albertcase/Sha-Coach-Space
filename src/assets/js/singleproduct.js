@@ -3,7 +3,7 @@
  * */
 ;(function(){
     var controller = function(){
-
+        this.productNO = 0;
     };
     //init
     controller.prototype.init = function(){
@@ -69,6 +69,16 @@
             Cookies.set('fromproduct', 1);
         });
 
+    //    click buy
+        $('.btn-buy a').on('touchstart',function(e){
+            e.preventDefault();
+            if(self.productNO){
+                var curTrckingCode = self.productNO+'buya';
+                _hmt.push(['_trackEvent', 'btnBuy', 'click', curTrckingCode]);
+                location.href = $(this).attr('href');
+            }
+        });
+
     };
 
     //tang pop swiper effect
@@ -107,6 +117,13 @@
         }else{
             $('#product-wrap .btn-buy a').attr('href',productListJson[id].buylink);
         }
+
+        if(productListJson[id].productNO){
+            //    sell out
+            self.productNO = productListJson[id].productNO
+        }
+
+
 
 
     };

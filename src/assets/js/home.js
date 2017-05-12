@@ -211,6 +211,7 @@
         $('.ani-product a').on('touchstart',function(e){
             e.preventDefault();
             var curTrckingCode = $(this).attr('data-tracking');
+            _hmt.push(['_trackEvent', 'btn', 'click', curTrckingCode]);
             window.location.href = $(this).attr('href');
         });
 
