@@ -981,7 +981,7 @@ $(document).ready(function(){
             $('.container').css('height',$('.pin-product').height());
             $('#pin-product').addClass('scrollnow');
             self.enableScroll = true;
-        },totalTime*1000);
+        },totalTime*1100);
 
 
 
