@@ -1391,10 +1391,10 @@ body {
   transform: translateY(0);
 }
 .container.active {
-  -moz-transition: all 10s ease-out;
-  -o-transition: all 10s ease-out;
-  -webkit-transition: all 10s ease-out;
-  transition: all 10s ease-out;
+  -moz-transition: all 10s ease-in;
+  -o-transition: all 10s ease-in;
+  -webkit-transition: all 10s ease-in;
+  transition: all 10s ease-in;
   -webkit-transform: translateY(0px);
   -moz-transform: translateY(0px);
   -ms-transform: translateY(0px);
@@ -1473,7 +1473,7 @@ body {
   }
 }
 .air-plane.flyout {
-  bottom: 110vh;
+  bottom: 300vh;
 }
 
 .btn-golists {
