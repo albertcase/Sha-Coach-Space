@@ -126,11 +126,11 @@ body{
 .container{
   transform: translateY(0);
   &.active{
-    @include transition(all 10s linear);
+    @include transition(all 10s ease-out);
     @include transform(translateY(0px));
   }
   &.godown{
-    @include transition(all 1s linear);
+    @include transition(all 1s ease);
   }
   .bg{
     position: absolute;
@@ -141,7 +141,7 @@ body{
     background: url("../images/bg.jpg") repeat-y;
     background-size: 100%;
     &.active{
-      @include transition(all 12s linear);
+      @include transition(all 12s ease);
     }
   }
 }
@@ -213,6 +213,12 @@ body{
   }
 }
 
+
+@for $i from 1 through 11 {
+  .ani-product-#{$i}{
+    animation-delay: 211ms * $i;
+  }
+}
 //for pin-product
 #pin-product{
   min-height: 100vh;
@@ -232,7 +238,7 @@ body{
   .animate{
     opacity: 0;
     transition-property:opacity;
-    transition-duration:2s;
+    transition-duration:0.5s;
     &.active{
       opacity: 1;
     }
@@ -240,18 +246,24 @@ body{
   .ani-product {
     float: left;
     //display: inline-block;
-    @include animation(lefttoright 2s linear infinite);
+    //@include animation(lefttoright 2s ease infinite);
+    animation-name: lefttoright;
+    animation-duration:2s;
+    animation-timing-function: ease;
+    animation-iteration-count:infinite;
+
     @include keyframes(lefttoright){
       0%{
-        @include transform(rotate(0deg));
+        @include transform(rotate(0deg) scale(0.8));
       }
       50%{
-        @include transform(rotate(10deg));
+        @include transform(rotate(10deg) scale(1));
       }
       100%{
-        @include transform(rotate(0deg));
+        @include transform(rotate(0deg) scale(0.8));
       }
     }
+
   }
   .ani-product-5{
     clear: both;
