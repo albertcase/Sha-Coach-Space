@@ -1390,10 +1390,10 @@ body {
   transform: translateY(0);
 }
 .container.active {
-  -moz-transition: all 10s linear;
-  -o-transition: all 10s linear;
-  -webkit-transition: all 10s linear;
-  transition: all 10s linear;
+  -moz-transition: all 10s ease-out;
+  -o-transition: all 10s ease-out;
+  -webkit-transition: all 10s ease-out;
+  transition: all 10s ease-out;
   -webkit-transform: translateY(0px);
   -moz-transform: translateY(0px);
   -ms-transform: translateY(0px);
@@ -1401,10 +1401,10 @@ body {
   transform: translateY(0px);
 }
 .container.godown {
-  -moz-transition: all 1s linear;
-  -o-transition: all 1s linear;
-  -webkit-transition: all 1s linear;
-  transition: all 1s linear;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 .container .bg {
   position: absolute;
@@ -1416,10 +1416,10 @@ body {
   background-size: 100%;
 }
 .container .bg.active {
-  -moz-transition: all 12s linear;
-  -o-transition: all 12s linear;
-  -webkit-transition: all 12s linear;
-  transition: all 12s linear;
+  -moz-transition: all 12s ease;
+  -o-transition: all 12s ease;
+  -webkit-transition: all 12s ease;
+  transition: all 12s ease;
 }
 
 /*============
@@ -1504,6 +1504,50 @@ body {
   text-decoration: underline;
 }
 
+.ani-product-1 {
+  animation-delay: 211ms;
+}
+
+.ani-product-2 {
+  animation-delay: 422ms;
+}
+
+.ani-product-3 {
+  animation-delay: 633ms;
+}
+
+.ani-product-4 {
+  animation-delay: 844ms;
+}
+
+.ani-product-5 {
+  animation-delay: 1055ms;
+}
+
+.ani-product-6 {
+  animation-delay: 1266ms;
+}
+
+.ani-product-7 {
+  animation-delay: 1477ms;
+}
+
+.ani-product-8 {
+  animation-delay: 1688ms;
+}
+
+.ani-product-9 {
+  animation-delay: 1899ms;
+}
+
+.ani-product-10 {
+  animation-delay: 2110ms;
+}
+
+.ani-product-11 {
+  animation-delay: 2321ms;
+}
+
 #pin-product {
   min-height: 100vh;
   text-align: center;
@@ -1527,62 +1571,63 @@ body {
 #pin-product .animate {
   opacity: 0;
   transition-property: opacity;
-  transition-duration: 2s;
+  transition-duration: 0.5s;
 }
 #pin-product .animate.active {
   opacity: 1;
 }
 #pin-product .ani-product {
   float: left;
-  -webkit-animation: lefttoright 2s linear infinite;
-  -moz-animation: lefttoright 2s linear infinite;
-  animation: lefttoright 2s linear infinite;
+  animation-name: lefttoright;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
 }
 @-webkit-keyframes lefttoright {
   0% {
-    -webkit-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg) scale(0.8);
   }
   50% {
-    -webkit-transform: rotate(10deg);
+    -webkit-transform: rotate(10deg) scale(1);
   }
   100% {
-    -webkit-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg) scale(0.8);
   }
 }
 @-moz-keyframes lefttoright {
   0% {
-    -moz-transform: rotate(0deg);
+    -moz-transform: rotate(0deg) scale(0.8);
   }
   50% {
-    -moz-transform: rotate(10deg);
+    -moz-transform: rotate(10deg) scale(1);
   }
   100% {
-    -moz-transform: rotate(0deg);
+    -moz-transform: rotate(0deg) scale(0.8);
   }
 }
 @-o-keyframes lefttoright {
   0% {
-    -o-transform: rotate(0deg);
+    -o-transform: rotate(0deg) scale(0.8);
   }
   50% {
-    -o-transform: rotate(10deg);
+    -o-transform: rotate(10deg) scale(1);
   }
   100% {
-    -o-transform: rotate(0deg);
+    -o-transform: rotate(0deg) scale(0.8);
   }
 }
 @keyframes lefttoright {
   0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg) scale(0.8);
+    transform: rotate(0deg) scale(0.8);
   }
   50% {
-    -webkit-transform: rotate(10deg);
-    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg) scale(1);
+    transform: rotate(10deg) scale(1);
   }
   100% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg) scale(0.8);
+    transform: rotate(0deg) scale(0.8);
   }
 }
 #pin-product .ani-product-5 {

@@ -208,7 +208,7 @@
         Common.overscroll(document.getElementById('pin-product'));
 
     //    add baidu tracking
-        $('.ani-product a').on('touchstart',function(e){
+        $('.ani-product a').on('click',function(e){
             e.preventDefault();
             var curTrckingCode = $(this).attr('data-tracking');
             _hmt.push(['_trackEvent', 'btn', 'click', curTrckingCode]);
