@@ -699,7 +699,7 @@ function weixinshare(obj,successCallBack){
             link: obj.link,
             imgUrl: obj.img,
             success: function () {
-                _hmt.push(['_trackEvent', 'buttons', 'click', 'sharetotimeline']);
+                _hmt.push(['_trackEvent', 'wechat', 'click', 'sharetotimeline']);
                 successCallBack();
             },
             cancel: function () {
@@ -928,6 +928,13 @@ $(document).ready(function(){
         //
         //});
         Common.overscroll(document.getElementById('pin-product'));
+
+    //    add baidu tracking
+        $('.ani-product a').on('touchstart',function(e){
+            e.preventDefault();
+            var curTrckingCode = $(this).attr('data-tracking');
+            window.location.href = $(this).attr('href');
+        });
 
 
     };
