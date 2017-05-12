@@ -686,7 +686,7 @@ function weixinshare(obj,successCallBack){
             type: '',
             dataUrl: '',
             success: function () {
-                //_hmt.push(['_trackEvent', 'buttons', 'click', 'onMenuShareAppMessage']);
+                _hmt.push(['_trackEvent', 'wechat', 'click', 'sharetofriends']);
                 successCallBack();
 
             },
@@ -699,7 +699,7 @@ function weixinshare(obj,successCallBack){
             link: obj.link,
             imgUrl: obj.img,
             success: function () {
-                //_hmt.push(['_trackEvent', 'buttons', 'click', 'onMenuShareTimeline']);
+                _hmt.push(['_trackEvent', 'buttons', 'click', 'sharetotimeline']);
                 successCallBack();
             },
             cancel: function () {
