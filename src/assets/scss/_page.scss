@@ -616,3 +616,19 @@ body.page-product{
     }
   }
 }
+
+//for pc
+.pc-wrapper{
+  position: absolute;
+  left: 0;
+  top: 0;
+  @include size(100%,100%);
+  background: url("../images/pc-bg.jpg") repeat;
+  //background-size: cover;
+  padding-top: 60px;
+  box-sizing: border-box;
+  .pc-content{
+    max-width: 540px;
+    margin:0 auto;
+  }
+}

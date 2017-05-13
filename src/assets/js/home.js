@@ -269,18 +269,31 @@
 
 
     $(document).ready(function(){
-//    show form
-        var newFollow = new controller();
-        newFollow.init();
 
-        document.body.addEventListener('touchmove', function(evt) {
-            //In this case, the default behavior is scrolling the body, which
-            //would result in an overflow.  Since we don't want that, we preventDefault.
-            if(!evt._isScroller) {
-                evt.preventDefault();
-            }
-        });
-        Common.overscroll(document.querySelector('.terms-pop .pcontent'));
+        var u = navigator.userAgent,
+            app = navigator.appVersion;
+
+        if (!!u.match(/AppleWebKit.*Mobile.*/)) {
+            //mobile
+            $('.showonpc').remove();
+            var newFollow = new controller();
+            newFollow.init();
+
+            document.body.addEventListener('touchmove', function(evt) {
+                //In this case, the default behavior is scrolling the body, which
+                //would result in an overflow.  Since we don't want that, we preventDefault.
+                if(!evt._isScroller) {
+                    evt.preventDefault();
+                }
+            });
+            Common.overscroll(document.querySelector('.terms-pop .pcontent'));
+        } else {
+            //pc
+            $('.loading').remove();
+            $('.mod-orient-layer').remove();
+            $('.wrapper').remove();
+
+        }
 
 
     });
