@@ -323,6 +323,7 @@ var productListJson = [
         slideTangImg:[
             '/src/dist/images/look-1.jpg'
         ],
+        productNO:'19403', //for product id
     },
     {
         id:'7',
@@ -338,6 +339,7 @@ var productListJson = [
         slideTangImg:[
             '/src/dist/images/look-1.jpg'
         ],
+        productNO:'10855', //for product id
     },
     {
         id:'8',
@@ -353,6 +355,7 @@ var productListJson = [
         slideTangImg:[
             '/src/dist/images/look-1.jpg'
         ],
+        productNO:'10862', //for product id
     },
     {
         id:'9',
@@ -368,6 +371,7 @@ var productListJson = [
         slideTangImg:[
             '/src/dist/images/look-1.jpg'
         ],
+        productNO:'10632', //for product id
     }
 ];
 ;(function(){
